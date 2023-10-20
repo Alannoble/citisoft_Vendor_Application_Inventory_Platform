@@ -14,7 +14,15 @@ namespace Vendor_Application_Inventory_Platform
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (textBox2_TextChanged = "citisoft" && textBox1_TextChanged = "citisoft")
+            {
+                new Form2().Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or Password");
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -58,6 +66,11 @@ namespace Vendor_Application_Inventory_Platform
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
