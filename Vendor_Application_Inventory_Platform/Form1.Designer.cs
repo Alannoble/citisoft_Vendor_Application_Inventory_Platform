@@ -156,6 +156,7 @@
             Forgotpassword_button.Size = new Size(261, 41);
             Forgotpassword_button.TabIndex = 8;
             Forgotpassword_button.Text = "Forgot Password ?";
+            Forgotpassword_button.Click += Forgotpassword_button_Click;
             // 
             // Form1
             // 

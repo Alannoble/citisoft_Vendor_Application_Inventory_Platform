@@ -9,12 +9,12 @@ namespace Vendor_Application_Inventory_Platform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome");
+            MessageBox.Show("Welcome to CITISOFT");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox2_TextChanged = "citisoft" && textBox1_TextChanged = "citisoft")
+            if (Username_textBox.Text.Equals("citisoft") && Password_textBox1.Text.Equals("citisoft")) //  NametextBox1_TextChanged. == "citisoft" && textBox1_TextChanged == "citisoft")
             {
                 new Form2().Show();
                 this.Hide();
@@ -71,6 +71,11 @@ namespace Vendor_Application_Inventory_Platform
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Forgotpassword_button_Click(object sender, EventArgs e)
         {
 
         }
