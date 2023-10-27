@@ -59,5 +59,15 @@ namespace Vendor_Application_Inventory_Platform.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _27282 {
+            get {
+                object obj = ResourceManager.GetObject("27282", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

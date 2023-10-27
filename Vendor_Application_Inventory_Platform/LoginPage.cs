@@ -1,8 +1,8 @@
 namespace Vendor_Application_Inventory_Platform
 {
-    public partial class Form1 : Form
+    public partial class LoginPage : Form
     {
-        public Form1()
+        public LoginPage()
         {
             InitializeComponent();
         }
@@ -16,7 +16,14 @@ namespace Vendor_Application_Inventory_Platform
         {
             if (Username_textBox.Text.Equals("citisoft") && Password_textBox1.Text.Equals("citisoft")) //  NametextBox1_TextChanged. == "citisoft" && textBox1_TextChanged == "citisoft")
             {
-                new Form2().Show();
+                MessageBox.Show("Login sucessfull, You are Log in as a USER (limited privileges)");
+                new Dashboard().Show();
+                this.Hide();
+            }
+            else if (Username_textBox.Text.Equals("Admin") && Password_textBox1.Text.Equals("Password"))
+            {
+                MessageBox.Show("Login Sucessfull, You are Logged In  to the Admin portal");
+                new Dashboard().Show();
                 this.Hide();
             }
             else
@@ -37,7 +44,7 @@ namespace Vendor_Application_Inventory_Platform
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            new SignUp_Page().Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -77,7 +84,7 @@ namespace Vendor_Application_Inventory_Platform
 
         private void Forgotpassword_button_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Error", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
         }
     }
 }

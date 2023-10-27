@@ -1,6 +1,6 @@
 ﻿namespace Vendor_Application_Inventory_Platform
 {
-    partial class Form1
+    partial class LoginPage
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             SignUp_button = new Button();
             Login_button = new Button();
             Password_textBox1 = new TextBox();
@@ -73,6 +73,7 @@
             Password_textBox1.Name = "Password_textBox1";
             Password_textBox1.Size = new Size(645, 47);
             Password_textBox1.TabIndex = 2;
+            Password_textBox1.UseSystemPasswordChar = true;
             Password_textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Username_textBox

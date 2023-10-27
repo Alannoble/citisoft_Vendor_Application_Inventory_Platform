@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vendor_Application_Inventory_Platform
 {
-    public partial class Form2 : Form
+    public partial class Dashboard : Form
     {
-        public Form2()
+        public Dashboard()
         {
             InitializeComponent();
         }

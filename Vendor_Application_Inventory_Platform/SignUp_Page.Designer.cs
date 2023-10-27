@@ -1,7 +1,6 @@
-﻿
-namespace Vendor_Application_Inventory_Platform
+﻿namespace Vendor_Application_Inventory_Platform
 {
-    partial class Form2
+    partial class SignUp_Page
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +28,20 @@ namespace Vendor_Application_Inventory_Platform
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp_Page));
+            SuspendLayout();
+            // 
+            // SignUp_Page
+            // 
+            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(2260, 1346);
+            Name = "SignUp_Page";
+            Text = "SignUp";
+            Load += SignUp_Load;
+            ResumeLayout(false);
         }
 
         #endregion
