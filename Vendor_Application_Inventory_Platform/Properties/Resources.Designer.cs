@@ -69,5 +69,36 @@ namespace Vendor_Application_Inventory_Platform.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_human_resources_login_management_information_payro_track_5ad7cda3586cb1_5605091515240923233622 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-human-resources-login-management-information-payro-track-5ad7cda3586cb1.5" +
+                        "605091515240923233622", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2023_11_10_004008 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2023-11-10 004008", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Search_PNG_Isolated_HD {
+            get {
+                object obj = ResourceManager.GetObject("Search-PNG-Isolated-HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
