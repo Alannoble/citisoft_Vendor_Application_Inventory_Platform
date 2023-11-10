@@ -32,8 +32,6 @@ namespace Vendor_Application_Inventory_Platform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             txtSearch = new TextBox();
             panel1 = new Panel();
-            resultListBox = new ListBox();
-            panel3 = new Panel();
             searchBtn = new Button();
             pnlNav = new Panel();
             contactBtn = new Button();
@@ -60,8 +58,6 @@ namespace Vendor_Application_Inventory_Platform
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(resultListBox);
-            panel1.Controls.Add(panel3);
             panel1.Controls.Add(searchBtn);
             panel1.Controls.Add(txtSearch);
             panel1.Controls.Add(pnlNav);
@@ -75,24 +71,6 @@ namespace Vendor_Application_Inventory_Platform
             panel1.Name = "panel1";
             panel1.Size = new Size(951, 75);
             panel1.TabIndex = 2;
-            // 
-            // resultListBox
-            // 
-            resultListBox.FormattingEnabled = true;
-            resultListBox.ItemHeight = 20;
-            resultListBox.Location = new Point(609, 48);
-            resultListBox.Name = "resultListBox";
-            resultListBox.Size = new Size(194, 104);
-            resultListBox.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Transparent;
-            panel3.Cursor = Cursors.Hand;
-            panel3.Location = new Point(777, 74);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(174, 176);
-            panel3.TabIndex = 0;
             // 
             // searchBtn
             // 
@@ -246,7 +224,5 @@ namespace Vendor_Application_Inventory_Platform
         private Button searchBtn;
         private Panel pnlNav;
         private Panel pnlFormLoader;
-        private Panel panel3;
-        private ListBox resultListBox;
     }
 }
