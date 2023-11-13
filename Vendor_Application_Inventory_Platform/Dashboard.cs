@@ -22,6 +22,7 @@ namespace Vendor_Application_Inventory_Platform
             int nHeightEllipse
             );
 
+
         public Dashboard()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace Vendor_Application_Inventory_Platform
             frmDashboard_Vrb.Show();
         }
 
+        //
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.pnlFormLoader.Controls.Clear();
@@ -46,6 +48,7 @@ namespace Vendor_Application_Inventory_Platform
             frmProfilePrev_Vrb.Show();
         }
 
+        //
         private void contactBtn_Click(object sender, EventArgs e)
         {
             pnlNav.Width = contactBtn.Width;
@@ -59,11 +62,14 @@ namespace Vendor_Application_Inventory_Platform
             frmContact_Vrb.Show();
         }
 
+        //
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
+
+        //
         private void homeBtn_Click(object sender, EventArgs e)
         {
             pnlNav.Width = homeBtn.Width;
@@ -77,6 +83,7 @@ namespace Vendor_Application_Inventory_Platform
             frmDashboard_Vrb.Show();
         }
 
+        //
         private void vendorBtn_Click(object sender, EventArgs e)
         {
             pnlNav.Width = vendorBtn.Width;
@@ -90,21 +97,30 @@ namespace Vendor_Application_Inventory_Platform
             frmVendors_Vrb.Show();
         }
 
+        //
         private void homeBtn_Leave(object sender, EventArgs e)
         {
             homeBtn.BackColor = Color.FromArgb(255, 255, 255);
         }
 
+        //
         private void vendorBtn_Leave(object sender, EventArgs e)
         {
             vendorBtn.BackColor = Color.FromArgb(255, 255, 255);
         }
 
+        //
         private void contactBtn_Leave(object sender, EventArgs e)
         {
             contactBtn.BackColor = Color.FromArgb(255, 255, 255);
         }
 
+
+
+
+
+
+        //
         private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
         {
 
