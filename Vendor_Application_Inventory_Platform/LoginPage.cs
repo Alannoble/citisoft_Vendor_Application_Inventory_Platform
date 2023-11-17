@@ -45,36 +45,48 @@ namespace Vendor_Application_Inventory_Platform
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-
-            if (username == "" && password == "")
+            if (username.Equals("citisoft") && password.Equals("citisoft")) //  NametextBox1_TextChanged. == "citisoft" && textBox1_TextChanged == "citisoft")
             {
-                MessageBox.Show("Username and Password cannot be left empty, Please try again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                username = "";
-                password = "";
-                txtUsername.Focus();
+                new Dashboard().Show();
+                this.Hide();
             }
-            else
+            else if (username.Equals("Admin") && password.Equals("Password"))
             {
-                try
-                {
-                    string query = "SELECT * FROM users WHERE username = '" + username + "' and password = '" + password + "'";
-                    conn.Open();
-                    cmd = new SqlCommand(query, conn);
-                    reader = cmd.ExceptionReader();
-                    if(!reader.Read())
-                    {
-                        MessageBox.Show("Wrong username or password!","Login Failed",MessageBoxButtons.OK, MessageBoxIcon.Error); 
-                    }
+                
+            }
+            {
+                MessageBox.Show("Invalid username or Password");
+            }
 
-                }catch (SQLException ex)
-                {
+            // if (username == "" && password == "")
+            {
+                //   MessageBox.Show("Username and Password cannot be left empty, Please try again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                // username = "";
+                //password = "";
+                //txtUsername.Focus();
+                //}
+                // else
+                // {
+                //   try
+                // {
+                //   string query = "SELECT * FROM users WHERE username = '" + username + "' and password = '" + password + "'";
+                // conn.Open();
+                // cmd = new SqlCommand(query, conn);
+                //reader = cmd.ExceptionReader();
+                //if(!reader.Read())
+                //{
+                //    MessageBox.Show("Wrong username or password!","Login Failed",MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                // /}
+
+                //  }catch (SQLException ex)
+                //{
+
+                //}
+                //finally
+                // {
+                //  conn.Close();
+                //}
 
             }
         }
@@ -138,6 +150,11 @@ namespace Vendor_Application_Inventory_Platform
         private void button1_Click_1(object sender, EventArgs e)
         {
             new Dashboard().Show();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
