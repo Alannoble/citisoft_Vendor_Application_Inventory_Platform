@@ -50,7 +50,7 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(6, 6, 6, 6);
+            panel1.Margin = new Padding(6);
             panel1.Name = "panel1";
             panel1.Size = new Size(2021, 437);
             panel1.TabIndex = 0;
@@ -96,7 +96,7 @@
             // 
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 437);
-            panel2.Margin = new Padding(6, 6, 6, 6);
+            panel2.Margin = new Padding(6);
             panel2.Name = "panel2";
             panel2.Size = new Size(2021, 20);
             panel2.TabIndex = 1;
@@ -109,7 +109,7 @@
             panel3.Controls.Add(label5);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 457);
-            panel3.Margin = new Padding(6, 6, 6, 6);
+            panel3.Margin = new Padding(6);
             panel3.Name = "panel3";
             panel3.Size = new Size(2021, 439);
             panel3.TabIndex = 2;
@@ -160,7 +160,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "frmDashboard";
             Text = "frmDashboard";
             panel1.ResumeLayout(false);
