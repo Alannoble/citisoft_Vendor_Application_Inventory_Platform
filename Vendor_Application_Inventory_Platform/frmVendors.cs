@@ -23,5 +23,10 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void frmVendors_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
