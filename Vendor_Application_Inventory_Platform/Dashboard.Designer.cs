@@ -56,7 +56,7 @@ namespace Vendor_Application_Inventory_Platform
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1189, 94);
             this.panel1.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace Vendor_Application_Inventory_Platform
             // 
             this.pnlNav.BackColor = System.Drawing.Color.Black;
             this.pnlNav.Location = new System.Drawing.Point(241, 0);
-            this.pnlNav.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlNav.Margin = new System.Windows.Forms.Padding(4);
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(125, 4);
             this.pnlNav.TabIndex = 4;
@@ -78,7 +78,7 @@ namespace Vendor_Application_Inventory_Platform
             this.contactBtn.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.contactBtn.ForeColor = System.Drawing.SystemColors.Desktop;
             this.contactBtn.Location = new System.Drawing.Point(585, 0);
-            this.contactBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contactBtn.Margin = new System.Windows.Forms.Padding(4);
             this.contactBtn.Name = "contactBtn";
             this.contactBtn.Size = new System.Drawing.Size(172, 94);
             this.contactBtn.TabIndex = 2;
@@ -93,12 +93,13 @@ namespace Vendor_Application_Inventory_Platform
             this.vendorBtn.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.vendorBtn.ForeColor = System.Drawing.SystemColors.Desktop;
             this.vendorBtn.Location = new System.Drawing.Point(413, 0);
-            this.vendorBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vendorBtn.Margin = new System.Windows.Forms.Padding(4);
             this.vendorBtn.Name = "vendorBtn";
             this.vendorBtn.Size = new System.Drawing.Size(172, 94);
             this.vendorBtn.TabIndex = 2;
             this.vendorBtn.Text = "Vendors";
             this.vendorBtn.UseVisualStyleBackColor = true;
+            this.vendorBtn.Click += new System.EventHandler(this.vendorBtn_Click_1);
             // 
             // homeBtn
             // 
@@ -108,7 +109,7 @@ namespace Vendor_Application_Inventory_Platform
             this.homeBtn.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.homeBtn.ForeColor = System.Drawing.SystemColors.Desktop;
             this.homeBtn.Location = new System.Drawing.Point(241, 0);
-            this.homeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.homeBtn.Name = "homeBtn";
             this.homeBtn.Size = new System.Drawing.Size(172, 94);
             this.homeBtn.TabIndex = 2;
@@ -120,7 +121,7 @@ namespace Vendor_Application_Inventory_Platform
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = global::Vendor_Application_Inventory_Platform.Properties.Resources.Screenshot_2023_11_10_004008;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(241, 94);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,7 +133,7 @@ namespace Vendor_Application_Inventory_Platform
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1079, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(110, 94);
             this.panel2.TabIndex = 0;
@@ -142,7 +143,7 @@ namespace Vendor_Application_Inventory_Platform
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(21, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(62, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,7 +154,7 @@ namespace Vendor_Application_Inventory_Platform
             // 
             this.pnlFormLoader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pnlFormLoader.Location = new System.Drawing.Point(0, 89);
-            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFormLoader.Name = "pnlFormLoader";
             this.pnlFormLoader.Size = new System.Drawing.Size(1189, 632);
             this.pnlFormLoader.TabIndex = 3;

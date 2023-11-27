@@ -135,6 +135,12 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void vendorBtn_Click_1(object sender, EventArgs e)
+        {
+            new frmVendors().Show();
+           
+        }
     }
 }
 
