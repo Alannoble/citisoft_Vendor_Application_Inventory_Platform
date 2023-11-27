@@ -40,8 +40,7 @@ namespace Vendor_Application_Inventory_Platform
         {
             MessageBox.Show("Welcome to CITISOFT");
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void Login_button_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
@@ -55,6 +54,7 @@ namespace Vendor_Application_Inventory_Platform
                 new MainForm().Show();
                 this.Hide();
             }
+            else
             {
                 MessageBox.Show("Invalid username or Password");
             }
@@ -151,6 +151,7 @@ namespace Vendor_Application_Inventory_Platform
         private void button1_Click_1(object sender, EventArgs e)
         {
             new Dashboard().Show();
+            
         }
 
         private void label2_Click_1(object sender, EventArgs e)
@@ -159,6 +160,16 @@ namespace Vendor_Application_Inventory_Platform
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
