@@ -29,225 +29,235 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
-            SignUp_button = new Button();
-            Login_button = new Button();
-            txtPassword = new TextBox();
-            txtUsername = new TextBox();
-            Password_label = new Label();
-            username_label = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            Forgotpassword_button = new Label();
-            pictureBox3 = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            SuspendLayout();
+            this.SignUp_button = new System.Windows.Forms.Button();
+            this.Login_button = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.Password_label = new System.Windows.Forms.Label();
+            this.username_label = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Forgotpassword_button = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.SuspendLayout();
             // 
             // SignUp_button
             // 
-            SignUp_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SignUp_button.BackColor = Color.Transparent;
-            SignUp_button.Cursor = Cursors.Hand;
-            SignUp_button.FlatAppearance.BorderSize = 0;
-            SignUp_button.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            SignUp_button.ForeColor = SystemColors.Highlight;
-            SignUp_button.Location = new Point(332, 1175);
-            SignUp_button.Margin = new Padding(6, 8, 6, 8);
-            SignUp_button.Name = "SignUp_button";
-            SignUp_button.Size = new Size(255, 92);
-            SignUp_button.TabIndex = 6;
-            SignUp_button.Text = "Sign Up";
-            SignUp_button.UseVisualStyleBackColor = false;
-            SignUp_button.Click += button1_Click;
+            this.SignUp_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SignUp_button.BackColor = System.Drawing.Color.Transparent;
+            this.SignUp_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SignUp_button.FlatAppearance.BorderSize = 0;
+            this.SignUp_button.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SignUp_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.SignUp_button.Location = new System.Drawing.Point(195, 716);
+            this.SignUp_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SignUp_button.Name = "SignUp_button";
+            this.SignUp_button.Size = new System.Drawing.Size(150, 0);
+            this.SignUp_button.TabIndex = 6;
+            this.SignUp_button.Text = "Sign Up";
+            this.SignUp_button.UseVisualStyleBackColor = false;
             // 
             // Login_button
             // 
-            Login_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Login_button.BackColor = Color.DodgerBlue;
-            Login_button.Cursor = Cursors.Hand;
-            Login_button.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            Login_button.ForeColor = Color.White;
-            Login_button.Location = new Point(242, 972);
-            Login_button.Margin = new Padding(6, 8, 6, 8);
-            Login_button.Name = "Login_button";
-            Login_button.Size = new Size(440, 109);
-            Login_button.TabIndex = 7;
-            Login_button.Text = "Login";
-            Login_button.UseVisualStyleBackColor = false;
-            Login_button.Click += button2_Click;
+            this.Login_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Login_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Login_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Login_button.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Login_button.ForeColor = System.Drawing.Color.White;
+            this.Login_button.Location = new System.Drawing.Point(142, 593);
+            this.Login_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Login_button.Name = "Login_button";
+            this.Login_button.Size = new System.Drawing.Size(259, 66);
+            this.Login_button.TabIndex = 7;
+            this.Login_button.Text = "Login";
+            this.Login_button.UseVisualStyleBackColor = false;
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtPassword.BackColor = SystemColors.Control;
-            txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Location = new Point(257, 847);
-            txtPassword.Margin = new Padding(6, 8, 6, 8);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(425, 40);
-            txtPassword.TabIndex = 1;
-            txtPassword.UseSystemPasswordChar = true;
-            txtPassword.TextChanged += textBox1_TextChanged;
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Location = new System.Drawing.Point(151, 516);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(250, 24);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsername
             // 
-            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtUsername.BackColor = SystemColors.Control;
-            txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Location = new Point(257, 674);
-            txtUsername.Margin = new Padding(6, 8, 6, 8);
-            txtUsername.Multiline = true;
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(425, 55);
-            txtUsername.TabIndex = 0;
-            txtUsername.TextChanged += textBox2_TextChanged;
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Location = new System.Drawing.Point(151, 411);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(250, 34);
+            this.txtUsername.TabIndex = 0;
             // 
             // Password_label
             // 
-            Password_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Password_label.AutoEllipsis = true;
-            Password_label.AutoSize = true;
-            Password_label.BackColor = Color.Transparent;
-            Password_label.FlatStyle = FlatStyle.Popup;
-            Password_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            Password_label.ForeColor = SystemColors.InactiveCaption;
-            Password_label.Location = new Point(257, 791);
-            Password_label.Margin = new Padding(6, 0, 6, 0);
-            Password_label.Name = "Password_label";
-            Password_label.Size = new Size(171, 46);
-            Password_label.TabIndex = 5;
-            Password_label.Text = "Password";
-            Password_label.Click += label2_Click;
+            this.Password_label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Password_label.AutoEllipsis = true;
+            this.Password_label.AutoSize = true;
+            this.Password_label.BackColor = System.Drawing.Color.Transparent;
+            this.Password_label.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Password_label.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Password_label.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Password_label.Location = new System.Drawing.Point(151, 482);
+            this.Password_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Password_label.Name = "Password_label";
+            this.Password_label.Size = new System.Drawing.Size(105, 30);
+            this.Password_label.TabIndex = 5;
+            this.Password_label.Text = "Password";
             // 
             // username_label
             // 
-            username_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            username_label.AutoEllipsis = true;
-            username_label.AutoSize = true;
-            username_label.BackColor = Color.Transparent;
-            username_label.FlatStyle = FlatStyle.Popup;
-            username_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            username_label.ForeColor = SystemColors.InactiveCaption;
-            username_label.Location = new Point(257, 619);
-            username_label.Margin = new Padding(6, 0, 6, 0);
-            username_label.Name = "username_label";
-            username_label.Size = new Size(180, 46);
-            username_label.TabIndex = 4;
-            username_label.Text = "Username";
-            username_label.Click += label1_Click;
+            this.username_label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.username_label.AutoEllipsis = true;
+            this.username_label.AutoSize = true;
+            this.username_label.BackColor = System.Drawing.Color.Transparent;
+            this.username_label.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.username_label.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.username_label.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.username_label.Location = new System.Drawing.Point(151, 377);
+            this.username_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.username_label.Name = "username_label";
+            this.username_label.Size = new System.Drawing.Size(110, 30);
+            this.username_label.TabIndex = 4;
+            this.username_label.Text = "Username";
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(387, 177);
-            pictureBox1.Margin = new Padding(6, 8, 6, 8);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(200, 200);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(228, 108);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, -2);
-            pictureBox2.Margin = new Padding(2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(0, 322);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 7;
-            pictureBox2.TabStop = false;
-            pictureBox2.WaitOnLoad = true;
-            pictureBox2.Click += pictureBox2_Click;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(0, 196);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.WaitOnLoad = true;
             // 
             // Forgotpassword_button
             // 
-            Forgotpassword_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Forgotpassword_button.AutoEllipsis = true;
-            Forgotpassword_button.AutoSize = true;
-            Forgotpassword_button.BackColor = Color.Transparent;
-            Forgotpassword_button.FlatStyle = FlatStyle.Popup;
-            Forgotpassword_button.ForeColor = SystemColors.Window;
-            Forgotpassword_button.Location = new Point(992, 1062);
-            Forgotpassword_button.Margin = new Padding(6, 0, 6, 0);
-            Forgotpassword_button.Name = "Forgotpassword_button";
-            Forgotpassword_button.Size = new Size(261, 41);
-            Forgotpassword_button.TabIndex = 8;
-            Forgotpassword_button.Text = "Forgot Password ?";
-            Forgotpassword_button.Click += Forgotpassword_button_Click;
+            this.Forgotpassword_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Forgotpassword_button.AutoEllipsis = true;
+            this.Forgotpassword_button.AutoSize = true;
+            this.Forgotpassword_button.BackColor = System.Drawing.Color.Transparent;
+            this.Forgotpassword_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Forgotpassword_button.ForeColor = System.Drawing.SystemColors.Window;
+            this.Forgotpassword_button.Location = new System.Drawing.Point(584, 648);
+            this.Forgotpassword_button.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Forgotpassword_button.Name = "Forgotpassword_button";
+            this.Forgotpassword_button.Size = new System.Drawing.Size(159, 25);
+            this.Forgotpassword_button.TabIndex = 8;
+            this.Forgotpassword_button.Text = "Forgot Password ?";
             // 
             // pictureBox3
             // 
-            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Image = Properties.Resources.Screenshot_2023_11_10_004008;
-            pictureBox3.Location = new Point(-2, 0);
-            pictureBox3.Margin = new Padding(6);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(266, 127);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 9;
-            pictureBox3.TabStop = false;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Image = global::Vendor_Application_Inventory_Platform.Properties.Resources.Screenshot_2023_11_10_004008;
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(156, 77);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ActiveBorder;
-            label1.Location = new Point(289, 1125);
-            label1.Margin = new Padding(6, 0, 6, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(324, 41);
-            label1.TabIndex = 10;
-            label1.Text = "Don't have an account?";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label1.Location = new System.Drawing.Point(170, 686);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Don\'t have an account?";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(889, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(36, 41);
-            label2.TabIndex = 11;
-            label2.Text = "X";
-            label2.Click += label2_Click_1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(523, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "X";
             // 
             // LoginPage
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(937, 1515);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(pictureBox3);
-            Controls.Add(Forgotpassword_button);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(Password_label);
-            Controls.Add(username_label);
-            Controls.Add(txtUsername);
-            Controls.Add(txtPassword);
-            Controls.Add(Login_button);
-            Controls.Add(SignUp_button);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(6, 8, 6, 8);
-            Name = "LoginPage";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(551, 674);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.Forgotpassword_button);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Password_label);
+            this.Controls.Add(this.username_label);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.Login_button);
+            this.Controls.Add(this.SignUp_button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "LoginPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

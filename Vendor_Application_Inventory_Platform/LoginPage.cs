@@ -52,7 +52,8 @@ namespace Vendor_Application_Inventory_Platform
             }
             else if (username.Equals("Admin") && password.Equals("Password"))
             {
-                
+                new MainForm().Show();
+                this.Hide();
             }
             {
                 MessageBox.Show("Invalid username or Password");
@@ -155,6 +156,11 @@ namespace Vendor_Application_Inventory_Platform
         private void label2_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

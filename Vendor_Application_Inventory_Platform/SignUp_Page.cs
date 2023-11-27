@@ -65,6 +65,7 @@ namespace Vendor_Application_Inventory_Platform
         {
             new LoginPage().Show();
             this.Hide();
+           
         }
     }
 }
