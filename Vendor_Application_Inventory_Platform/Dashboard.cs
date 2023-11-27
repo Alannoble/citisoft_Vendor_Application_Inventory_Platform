@@ -131,7 +131,10 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

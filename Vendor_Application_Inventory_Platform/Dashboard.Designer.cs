@@ -30,181 +30,153 @@ namespace Vendor_Application_Inventory_Platform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            txtSearch = new TextBox();
-            panel1 = new Panel();
-            searchBtn = new Button();
-            pnlNav = new Panel();
-            contactBtn = new Button();
-            vendorBtn = new Button();
-            homeBtn = new Button();
-            pictureBox2 = new PictureBox();
-            panel2 = new Panel();
-            pictureBox1 = new PictureBox();
-            pnlFormLoader = new Panel();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
-            // 
-            // txtSearch
-            // 
-            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtSearch.Location = new Point(609, 24);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(248, 27);
-            txtSearch.TabIndex = 1;
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlNav = new System.Windows.Forms.Panel();
+            this.contactBtn = new System.Windows.Forms.Button();
+            this.vendorBtn = new System.Windows.Forms.Button();
+            this.homeBtn = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlFormLoader = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(searchBtn);
-            panel1.Controls.Add(txtSearch);
-            panel1.Controls.Add(pnlNav);
-            panel1.Controls.Add(contactBtn);
-            panel1.Controls.Add(vendorBtn);
-            panel1.Controls.Add(homeBtn);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(panel2);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(951, 75);
-            panel1.TabIndex = 2;
-            // 
-            // searchBtn
-            // 
-            searchBtn.BackColor = Color.Transparent;
-            searchBtn.BackgroundImage = Properties.Resources.Search_PNG_Isolated_HD;
-            searchBtn.BackgroundImageLayout = ImageLayout.Zoom;
-            searchBtn.Dock = DockStyle.Right;
-            searchBtn.FlatAppearance.BorderSize = 0;
-            searchBtn.FlatStyle = FlatStyle.Flat;
-            searchBtn.Image = Properties.Resources.Search_PNG_Isolated_HD;
-            searchBtn.Location = new Point(801, 0);
-            searchBtn.Name = "searchBtn";
-            searchBtn.Size = new Size(62, 75);
-            searchBtn.TabIndex = 3;
-            searchBtn.UseVisualStyleBackColor = false;
-            searchBtn.Click += searchBtn_Click;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pnlNav);
+            this.panel1.Controls.Add(this.contactBtn);
+            this.panel1.Controls.Add(this.vendorBtn);
+            this.panel1.Controls.Add(this.homeBtn);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1189, 94);
+            this.panel1.TabIndex = 2;
             // 
             // pnlNav
             // 
-            pnlNav.BackColor = Color.Black;
-            pnlNav.Location = new Point(193, 0);
-            pnlNav.Name = "pnlNav";
-            pnlNav.Size = new Size(100, 3);
-            pnlNav.TabIndex = 4;
+            this.pnlNav.BackColor = System.Drawing.Color.Black;
+            this.pnlNav.Location = new System.Drawing.Point(241, 0);
+            this.pnlNav.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(125, 4);
+            this.pnlNav.TabIndex = 4;
             // 
             // contactBtn
             // 
-            contactBtn.Dock = DockStyle.Left;
-            contactBtn.FlatAppearance.BorderSize = 0;
-            contactBtn.FlatStyle = FlatStyle.Flat;
-            contactBtn.Font = new Font("Nirmala UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            contactBtn.ForeColor = SystemColors.Desktop;
-            contactBtn.Location = new Point(469, 0);
-            contactBtn.Name = "contactBtn";
-            contactBtn.Size = new Size(138, 75);
-            contactBtn.TabIndex = 2;
-            contactBtn.Text = "Contact Us";
-            contactBtn.UseVisualStyleBackColor = true;
-            contactBtn.Click += contactBtn_Click;
-            contactBtn.Leave += contactBtn_Leave;
+            this.contactBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.contactBtn.FlatAppearance.BorderSize = 0;
+            this.contactBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contactBtn.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contactBtn.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.contactBtn.Location = new System.Drawing.Point(585, 0);
+            this.contactBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contactBtn.Name = "contactBtn";
+            this.contactBtn.Size = new System.Drawing.Size(172, 94);
+            this.contactBtn.TabIndex = 2;
+            this.contactBtn.Text = "Contact Us";
+            this.contactBtn.UseVisualStyleBackColor = true;
             // 
             // vendorBtn
             // 
-            vendorBtn.Dock = DockStyle.Left;
-            vendorBtn.FlatAppearance.BorderSize = 0;
-            vendorBtn.FlatStyle = FlatStyle.Flat;
-            vendorBtn.Font = new Font("Nirmala UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            vendorBtn.ForeColor = SystemColors.Desktop;
-            vendorBtn.Location = new Point(331, 0);
-            vendorBtn.Name = "vendorBtn";
-            vendorBtn.Size = new Size(138, 75);
-            vendorBtn.TabIndex = 2;
-            vendorBtn.Text = "Vendors";
-            vendorBtn.UseVisualStyleBackColor = true;
-            vendorBtn.Click += vendorBtn_Click;
-            vendorBtn.Leave += vendorBtn_Leave;
+            this.vendorBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.vendorBtn.FlatAppearance.BorderSize = 0;
+            this.vendorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vendorBtn.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.vendorBtn.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.vendorBtn.Location = new System.Drawing.Point(413, 0);
+            this.vendorBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vendorBtn.Name = "vendorBtn";
+            this.vendorBtn.Size = new System.Drawing.Size(172, 94);
+            this.vendorBtn.TabIndex = 2;
+            this.vendorBtn.Text = "Vendors";
+            this.vendorBtn.UseVisualStyleBackColor = true;
             // 
             // homeBtn
             // 
-            homeBtn.Dock = DockStyle.Left;
-            homeBtn.FlatAppearance.BorderSize = 0;
-            homeBtn.FlatStyle = FlatStyle.Flat;
-            homeBtn.Font = new Font("Nirmala UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            homeBtn.ForeColor = SystemColors.Desktop;
-            homeBtn.Location = new Point(193, 0);
-            homeBtn.Name = "homeBtn";
-            homeBtn.Size = new Size(138, 75);
-            homeBtn.TabIndex = 2;
-            homeBtn.Text = "Home";
-            homeBtn.UseVisualStyleBackColor = true;
-            homeBtn.Click += homeBtn_Click;
-            homeBtn.Leave += homeBtn_Leave;
+            this.homeBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.homeBtn.FlatAppearance.BorderSize = 0;
+            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBtn.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.homeBtn.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.homeBtn.Location = new System.Drawing.Point(241, 0);
+            this.homeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Size = new System.Drawing.Size(172, 94);
+            this.homeBtn.TabIndex = 2;
+            this.homeBtn.Text = "Home";
+            this.homeBtn.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
-            pictureBox2.Dock = DockStyle.Left;
-            pictureBox2.Image = Properties.Resources.Screenshot_2023_11_10_004008;
-            pictureBox2.Location = new Point(0, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(193, 75);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::Vendor_Application_Inventory_Platform.Properties.Resources.Screenshot_2023_11_10_004008;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(241, 94);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
-            panel2.Controls.Add(pictureBox1);
-            panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(863, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(88, 75);
-            panel2.TabIndex = 0;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1079, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(110, 94);
+            this.panel2.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(17, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(50, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlFormLoader
             // 
-            pnlFormLoader.ImeMode = ImeMode.NoControl;
-            pnlFormLoader.Location = new Point(0, 71);
-            pnlFormLoader.Name = "pnlFormLoader";
-            pnlFormLoader.Size = new Size(951, 506);
-            pnlFormLoader.TabIndex = 3;
-            pnlFormLoader.Paint += pnlFormLoader_Paint;
+            this.pnlFormLoader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pnlFormLoader.Location = new System.Drawing.Point(0, 89);
+            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFormLoader.Name = "pnlFormLoader";
+            this.pnlFormLoader.Size = new System.Drawing.Size(1189, 632);
+            this.pnlFormLoader.TabIndex = 3;
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(951, 577);
-            Controls.Add(panel1);
-            Controls.Add(pnlFormLoader);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(1);
-            Name = "Dashboard";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Dashboard";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1189, 721);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlFormLoader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dashboard";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -213,7 +185,6 @@ namespace Vendor_Application_Inventory_Platform
         }
 
         #endregion
-        private TextBox txtSearch;
         private Panel panel1;
         private Panel panel2;
         private PictureBox pictureBox1;
@@ -221,7 +192,6 @@ namespace Vendor_Application_Inventory_Platform
         private Button homeBtn;
         private Button contactBtn;
         private Button vendorBtn;
-        private Button searchBtn;
         private Panel pnlNav;
         private Panel pnlFormLoader;
     }

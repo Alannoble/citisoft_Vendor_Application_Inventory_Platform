@@ -33,19 +33,20 @@
             this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.profileBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vendorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyWebsiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.softwareNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeOfSoftwareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,23 +81,13 @@
             this.softwareNameDataGridViewTextBoxColumn,
             this.typeOfSoftwareDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.vendorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(144, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(106, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(962, 487);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // dataSet1BindingSource
-            // 
-            this.dataSet1BindingSource.DataSource = typeof(Vendor_Application_Inventory_Platform.DataSet1);
-            this.dataSet1BindingSource.Position = 0;
-            // 
-            // vendorBindingSource
-            // 
-            this.vendorBindingSource.DataMember = "vendor";
-            this.vendorBindingSource.DataSource = this.dataSet1BindingSource;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -152,11 +143,31 @@
             this.typeOfSoftwareDataGridViewTextBoxColumn.ReadOnly = true;
             this.typeOfSoftwareDataGridViewTextBoxColumn.Width = 150;
             // 
+            // vendorBindingSource
+            // 
+            this.vendorBindingSource.DataMember = "vendor";
+            this.vendorBindingSource.DataSource = this.dataSet1BindingSource;
+            // 
+            // dataSet1BindingSource
+            // 
+            this.dataSet1BindingSource.DataSource = typeof(Vendor_Application_Inventory_Platform.DataSet1);
+            this.dataSet1BindingSource.Position = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(839, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "search";
+            // 
             // frmVendors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 632);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -167,8 +178,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +199,6 @@
         private DataGridViewTextBoxColumn typeOfSoftwareDataGridViewTextBoxColumn;
         private BindingSource vendorBindingSource;
         private BindingSource dataSet1BindingSource;
+        private Label label2;
     }
 }
