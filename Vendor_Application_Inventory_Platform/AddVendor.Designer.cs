@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.addVendor_clearBtn = new System.Windows.Forms.Button();
+            this.addVendor_deleteBtn = new System.Windows.Forms.Button();
+            this.addVendor_updateBtn = new System.Windows.Forms.Button();
+            this.addVendor_addBtn = new System.Windows.Forms.Button();
+            this.addVendor_importBtn = new System.Windows.Forms.Button();
+            this.addVendor_picture = new System.Windows.Forms.PictureBox();
+            this.addVendor_typeOfSoftware = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.addVendor_softwareName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.addVendor_companyAddress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.addVendor_companyWebsite = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.addVendor_companyName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.addVendor_id = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addVendor_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,47 +70,15 @@
             this.panel1.Size = new System.Drawing.Size(1099, 400);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // dataGridView1
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Location = new System.Drawing.Point(0, 397);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1099, 335);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel3.Location = new System.Drawing.Point(0, 397);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1099, 335);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.textBox4);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(40, 442);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1099, 294);
-            this.panel4.TabIndex = 3;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 80);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(1061, 299);
+            this.dataGridView1.TabIndex = 4;
             // 
             // label1
             // 
@@ -122,15 +90,242 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Vendor Data";
             // 
-            // dataGridView1
+            // panel3
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1061, 299);
-            this.dataGridView1.TabIndex = 4;
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.Location = new System.Drawing.Point(0, 397);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1099, 335);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Location = new System.Drawing.Point(0, 397);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1099, 335);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.addVendor_clearBtn);
+            this.panel4.Controls.Add(this.addVendor_deleteBtn);
+            this.panel4.Controls.Add(this.addVendor_updateBtn);
+            this.panel4.Controls.Add(this.addVendor_addBtn);
+            this.panel4.Controls.Add(this.addVendor_importBtn);
+            this.panel4.Controls.Add(this.addVendor_picture);
+            this.panel4.Controls.Add(this.addVendor_typeOfSoftware);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.addVendor_softwareName);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.addVendor_companyAddress);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.addVendor_companyWebsite);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.addVendor_companyName);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.addVendor_id);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(40, 442);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1099, 294);
+            this.panel4.TabIndex = 3;
+            // 
+            // addVendor_clearBtn
+            // 
+            this.addVendor_clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addVendor_clearBtn.FlatAppearance.BorderSize = 0;
+            this.addVendor_clearBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_clearBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_clearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addVendor_clearBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_clearBtn.ForeColor = System.Drawing.Color.White;
+            this.addVendor_clearBtn.Location = new System.Drawing.Point(384, 237);
+            this.addVendor_clearBtn.Name = "addVendor_clearBtn";
+            this.addVendor_clearBtn.Size = new System.Drawing.Size(94, 34);
+            this.addVendor_clearBtn.TabIndex = 17;
+            this.addVendor_clearBtn.Text = "Clear";
+            this.addVendor_clearBtn.UseVisualStyleBackColor = false;
+            // 
+            // addVendor_deleteBtn
+            // 
+            this.addVendor_deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addVendor_deleteBtn.FlatAppearance.BorderSize = 0;
+            this.addVendor_deleteBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_deleteBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addVendor_deleteBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.addVendor_deleteBtn.Location = new System.Drawing.Point(270, 237);
+            this.addVendor_deleteBtn.Name = "addVendor_deleteBtn";
+            this.addVendor_deleteBtn.Size = new System.Drawing.Size(94, 34);
+            this.addVendor_deleteBtn.TabIndex = 16;
+            this.addVendor_deleteBtn.Text = "Delete";
+            this.addVendor_deleteBtn.UseVisualStyleBackColor = false;
+            // 
+            // addVendor_updateBtn
+            // 
+            this.addVendor_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addVendor_updateBtn.FlatAppearance.BorderSize = 0;
+            this.addVendor_updateBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addVendor_updateBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_updateBtn.ForeColor = System.Drawing.Color.White;
+            this.addVendor_updateBtn.Location = new System.Drawing.Point(160, 237);
+            this.addVendor_updateBtn.Name = "addVendor_updateBtn";
+            this.addVendor_updateBtn.Size = new System.Drawing.Size(94, 34);
+            this.addVendor_updateBtn.TabIndex = 15;
+            this.addVendor_updateBtn.Text = "Update";
+            this.addVendor_updateBtn.UseVisualStyleBackColor = false;
+            // 
+            // addVendor_addBtn
+            // 
+            this.addVendor_addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addVendor_addBtn.FlatAppearance.BorderSize = 0;
+            this.addVendor_addBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addVendor_addBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_addBtn.ForeColor = System.Drawing.Color.White;
+            this.addVendor_addBtn.Location = new System.Drawing.Point(46, 237);
+            this.addVendor_addBtn.Name = "addVendor_addBtn";
+            this.addVendor_addBtn.Size = new System.Drawing.Size(94, 34);
+            this.addVendor_addBtn.TabIndex = 14;
+            this.addVendor_addBtn.Text = "Add";
+            this.addVendor_addBtn.UseVisualStyleBackColor = false;
+            this.addVendor_addBtn.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // addVendor_importBtn
+            // 
+            this.addVendor_importBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addVendor_importBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addVendor_importBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_importBtn.FlatAppearance.BorderSize = 0;
+            this.addVendor_importBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_importBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addVendor_importBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_importBtn.ForeColor = System.Drawing.Color.White;
+            this.addVendor_importBtn.Location = new System.Drawing.Point(752, 191);
+            this.addVendor_importBtn.Name = "addVendor_importBtn";
+            this.addVendor_importBtn.Size = new System.Drawing.Size(112, 34);
+            this.addVendor_importBtn.TabIndex = 13;
+            this.addVendor_importBtn.Text = "Import";
+            this.addVendor_importBtn.UseVisualStyleBackColor = false;
+            // 
+            // addVendor_picture
+            // 
+            this.addVendor_picture.Location = new System.Drawing.Point(596, 150);
+            this.addVendor_picture.Name = "addVendor_picture";
+            this.addVendor_picture.Size = new System.Drawing.Size(150, 127);
+            this.addVendor_picture.TabIndex = 12;
+            this.addVendor_picture.TabStop = false;
+            // 
+            // addVendor_typeOfSoftware
+            // 
+            this.addVendor_typeOfSoftware.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_typeOfSoftware.Location = new System.Drawing.Point(790, 87);
+            this.addVendor_typeOfSoftware.Name = "addVendor_typeOfSoftware";
+            this.addVendor_typeOfSoftware.Size = new System.Drawing.Size(219, 28);
+            this.addVendor_typeOfSoftware.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(581, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 24);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Type Of Software";
+            // 
+            // addVendor_softwareName
+            // 
+            this.addVendor_softwareName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_softwareName.Location = new System.Drawing.Point(790, 22);
+            this.addVendor_softwareName.Name = "addVendor_softwareName";
+            this.addVendor_softwareName.Size = new System.Drawing.Size(219, 28);
+            this.addVendor_softwareName.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(581, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 24);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Software Name";
+            // 
+            // addVendor_companyAddress
+            // 
+            this.addVendor_companyAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_companyAddress.Location = new System.Drawing.Point(226, 142);
+            this.addVendor_companyAddress.Name = "addVendor_companyAddress";
+            this.addVendor_companyAddress.Size = new System.Drawing.Size(219, 28);
+            this.addVendor_companyAddress.TabIndex = 7;
+            this.addVendor_companyAddress.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(17, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(169, 24);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Company Address";
+            // 
+            // addVendor_companyWebsite
+            // 
+            this.addVendor_companyWebsite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_companyWebsite.Location = new System.Drawing.Point(227, 96);
+            this.addVendor_companyWebsite.Name = "addVendor_companyWebsite";
+            this.addVendor_companyWebsite.Size = new System.Drawing.Size(219, 28);
+            this.addVendor_companyWebsite.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(18, 103);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 24);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Company Website";
+            // 
+            // addVendor_companyName
+            // 
+            this.addVendor_companyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_companyName.Location = new System.Drawing.Point(227, 53);
+            this.addVendor_companyName.Name = "addVendor_companyName";
+            this.addVendor_companyName.Size = new System.Drawing.Size(219, 28);
+            this.addVendor_companyName.TabIndex = 3;
+            this.addVendor_companyName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(18, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Company Name";
+            // 
+            // addVendor_id
+            // 
+            this.addVendor_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addVendor_id.Location = new System.Drawing.Point(227, 12);
+            this.addVendor_id.Name = "addVendor_id";
+            this.addVendor_id.Size = new System.Drawing.Size(219, 28);
+            this.addVendor_id.TabIndex = 1;
             // 
             // label2
             // 
@@ -143,207 +338,21 @@
             this.label2.Text = "Vendor ID";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(227, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 31);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(227, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(219, 31);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(18, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Company Name";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(227, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(219, 31);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(18, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 24);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Company Website";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(226, 142);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(219, 31);
-            this.textBox4.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(17, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Company Address";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(790, 22);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(219, 31);
-            this.textBox5.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(581, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 24);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Software Name";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(790, 87);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(219, 31);
-            this.textBox6.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(581, 94);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 24);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Type Of Software";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(596, 150);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 127);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(752, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Import";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(46, 237);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 34);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(160, 237);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 34);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(384, 237);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 34);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(270, 237);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 34);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // AddVendor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "AddVendor";
-            this.Size = new System.Drawing.Size(1175, 765);
+            this.Size = new System.Drawing.Size(1173, 763);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addVendor_picture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -357,22 +366,22 @@
         private Panel panel2;
         private Panel panel4;
         private Label label2;
-        private TextBox textBox4;
+        private TextBox addVendor_companyAddress;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox addVendor_companyWebsite;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox addVendor_companyName;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox6;
+        private TextBox addVendor_id;
+        private TextBox addVendor_typeOfSoftware;
         private Label label7;
-        private TextBox textBox5;
+        private TextBox addVendor_softwareName;
         private Label label6;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private PictureBox pictureBox1;
-        private Button button4;
-        private Button button5;
+        private Button addVendor_updateBtn;
+        private Button addVendor_addBtn;
+        private Button addVendor_importBtn;
+        private PictureBox addVendor_picture;
+        private Button addVendor_clearBtn;
+        private Button addVendor_deleteBtn;
     }
 }

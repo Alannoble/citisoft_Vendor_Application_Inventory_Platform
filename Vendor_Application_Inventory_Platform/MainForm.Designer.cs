@@ -129,10 +129,11 @@
             // 
             // logout_btn
             // 
-            this.logout_btn.BackColor = System.Drawing.Color.Transparent;
-            this.logout_btn.FlatAppearance.BorderSize = 0;
+            this.logout_btn.BackColor = System.Drawing.Color.White;
+            this.logout_btn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.logout_btn.FlatAppearance.BorderSize = 3;
             this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_btn.ForeColor = System.Drawing.Color.Black;
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
             this.logout_btn.Image = global::Vendor_Application_Inventory_Platform.Properties.Resources.icons8_logout_251;
             this.logout_btn.Location = new System.Drawing.Point(33, 701);
             this.logout_btn.Name = "logout_btn";
@@ -171,6 +172,7 @@
             this.addVendor_btn.TabIndex = 3;
             this.addVendor_btn.Text = "Add Vendor";
             this.addVendor_btn.UseVisualStyleBackColor = false;
+            this.addVendor_btn.Click += new System.EventHandler(this.addVendor_btn_Click);
             // 
             // dashboard_btn
             // 
@@ -210,6 +212,7 @@
             // 
             // addVendor1
             // 
+            this.addVendor1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addVendor1.Location = new System.Drawing.Point(285, 50);
             this.addVendor1.Name = "addVendor1";
             this.addVendor1.Size = new System.Drawing.Size(1175, 765);
@@ -217,6 +220,7 @@
             // 
             // viewVendors1
             // 
+            this.viewVendors1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewVendors1.Location = new System.Drawing.Point(285, 50);
             this.viewVendors1.Name = "viewVendors1";
             this.viewVendors1.Size = new System.Drawing.Size(1175, 765);
@@ -224,6 +228,7 @@
             // 
             // adminDashboard1
             // 
+            this.adminDashboard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adminDashboard1.Location = new System.Drawing.Point(285, 50);
             this.adminDashboard1.Name = "adminDashboard1";
             this.adminDashboard1.Size = new System.Drawing.Size(1175, 765);

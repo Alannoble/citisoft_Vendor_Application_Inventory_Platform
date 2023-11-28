@@ -29,12 +29,16 @@ namespace Vendor_Application_Inventory_Platform
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            adminDashboard1.Visible = true; 
+            addVendor1.Visible = false;
+            viewVendors1.Visible = false;   
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            adminDashboard1.Visible = false;
+            addVendor1.Visible = false;
+            viewVendors1.Visible = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -80,9 +84,19 @@ namespace Vendor_Application_Inventory_Platform
 
             if (check == DialogResult.Yes)
             {
-                
+                LoginPage loginForm = new LoginPage();
+                loginForm.Show();
+                this.Hide();
+
             }
 
+        }
+
+        private void addVendor_btn_Click(object sender, EventArgs e)
+        {
+            adminDashboard1.Visible = false;
+            addVendor1.Visible = true;
+            viewVendors1.Visible = false;
         }
     }
 }

@@ -159,5 +159,9 @@ namespace Vendor_Application_Inventory_Platform
             Application.Exit();
         }
 
+        private void LoginPage_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
