@@ -28,199 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            panel5 = new Panel();
+            label5 = new Label();
+            label6 = new Label();
+            pictureBox3 = new PictureBox();
+            panel4 = new Panel();
+            label3 = new Label();
+            label4 = new Label();
+            pictureBox2 = new PictureBox();
+            panel3 = new Panel();
+            label2 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            panel2 = new Panel();
+            panel1.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(34, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1111, 216);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(42, 36);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 150);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Location = new System.Drawing.Point(32, 274);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1111, 424);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(405, 33);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 150);
-            this.panel4.TabIndex = 1;
+            panel1.BackColor = SystemColors.ButtonHighlight;
+            panel1.Controls.Add(panel5);
+            panel1.Controls.Add(panel4);
+            panel1.Controls.Add(panel3);
+            panel1.Location = new Point(58, 71);
+            panel1.Margin = new Padding(5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1889, 354);
+            panel1.TabIndex = 0;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(756, 33);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 150);
-            this.panel5.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vendor_Application_Inventory_Platform.Properties.Resources.icons8_identification_documents_70;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Vendor_Application_Inventory_Platform.Properties.Resources.inactive;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 41);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Vendor_Application_Inventory_Platform.Properties.Resources.icons8_employees_70;
-            this.pictureBox2.Location = new System.Drawing.Point(24, 41);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(121, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Total Vendors";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(244, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "5";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(246, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 39);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "32";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(152, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 27);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Active Users";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            panel5.BackColor = Color.FromArgb(33, 11, 97);
+            panel5.Controls.Add(label5);
+            panel5.Controls.Add(label6);
+            panel5.Controls.Add(pictureBox3);
+            panel5.Location = new Point(1285, 54);
+            panel5.Margin = new Padding(5);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(510, 246);
+            panel5.TabIndex = 2;
+            panel5.Paint += panel5_Paint;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(247, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 39);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "8";
+            label5.AutoSize = true;
+            label5.Font = new Font("Tahoma", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(420, 52);
+            label5.Margin = new Padding(5, 0, 5, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(57, 65);
+            label5.TabIndex = 4;
+            label5.Text = "8";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(133, 104);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 27);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Inactive users";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            label6.AutoSize = true;
+            label6.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(226, 171);
+            label6.Margin = new Padding(5, 0, 5, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(247, 45);
+            label6.TabIndex = 3;
+            label6.Text = "Inactive users";
+            label6.Click += label6_Click;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.inactive;
+            pictureBox3.Location = new Point(34, 67);
+            pictureBox3.Margin = new Padding(5);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(119, 115);
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(33, 11, 97);
+            panel4.Controls.Add(label3);
+            panel4.Controls.Add(label4);
+            panel4.Controls.Add(pictureBox2);
+            panel4.Location = new Point(688, 54);
+            panel4.Margin = new Padding(5);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(510, 246);
+            panel4.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Tahoma", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(418, 34);
+            label3.Margin = new Padding(5, 0, 5, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 65);
+            label3.TabIndex = 4;
+            label3.Text = "32";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(258, 171);
+            label4.Margin = new Padding(5, 0, 5, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(218, 45);
+            label4.TabIndex = 3;
+            label4.Text = "Active Users";
+            label4.Click += label4_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.icons8_employees_70;
+            pictureBox2.Location = new Point(41, 67);
+            pictureBox2.Margin = new Padding(5);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(119, 115);
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(33, 11, 97);
+            panel3.Controls.Add(label2);
+            panel3.Controls.Add(label1);
+            panel3.Controls.Add(pictureBox1);
+            panel3.Location = new Point(71, 59);
+            panel3.Margin = new Padding(5);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(510, 246);
+            panel3.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Tahoma", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(415, 30);
+            label2.Margin = new Padding(5, 0, 5, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 65);
+            label2.TabIndex = 2;
+            label2.Text = "5";
+            label2.Click += label2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(206, 166);
+            label1.Margin = new Padding(5, 0, 5, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(245, 45);
+            label1.TabIndex = 1;
+            label1.Text = "Total Vendors";
+            label1.Click += label1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.icons8_identification_documents_70;
+            pictureBox1.Location = new Point(42, 62);
+            pictureBox1.Margin = new Padding(5);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(119, 115);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ButtonHighlight;
+            panel2.Location = new Point(54, 449);
+            panel2.Margin = new Padding(5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1889, 695);
+            panel2.TabIndex = 1;
             // 
             // adminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "adminDashboard";
-            this.Size = new System.Drawing.Size(1175, 765);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Margin = new Padding(5);
+            Name = "adminDashboard";
+            RightToLeft = RightToLeft.No;
+            Size = new Size(1998, 1255);
+            Load += adminDashboard_Load;
+            panel1.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

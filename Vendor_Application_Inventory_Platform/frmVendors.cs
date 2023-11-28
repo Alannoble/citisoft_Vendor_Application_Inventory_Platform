@@ -13,7 +13,7 @@ namespace Vendor_Application_Inventory_Platform
 
     public partial class frmVendors : Form
     {
-        private List<Profile> profiles = new List<Profile>();
+        private List<UserManagment> profiles = new List<UserManagment>();
         public frmVendors()
         {
             InitializeComponent();

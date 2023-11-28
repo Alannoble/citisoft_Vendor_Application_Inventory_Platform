@@ -136,6 +136,15 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
+        private void pnlFormLoader_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

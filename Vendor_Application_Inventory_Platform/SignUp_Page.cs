@@ -12,60 +12,69 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class SignUp_Page : Form
     {
-        static SqlConnection conn = null!;
-        static SqlConnection cmd = null!;
-        static SqlDataReader reader = null!;
+        private UserManagment userManager;
 
-        public SignUp_Page()
+        public SignUp_Page(UserManagment userManager)
         {
             InitializeComponent();
-            Database_Connection();
+            this.userManager = new UserManagment();
         }
-
-        private void Database_Connection()
-        {
-            string url = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\emman\Source\Repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\dbuser.mdf;Integrated Security=True";
-
-            conn = new SqlConnection(url);
-        }
-
-
         private void Register_button_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "" && txtPassword.Text == "" && txtConPassword.Text == "")
+            if (userManager != null)
             {
-                MessageBox.Show("Username and Password fields cannot be left empty.", "SIGN UP FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (txtUsername.Text == "" && txtPassword.Text == "" && txtConPassword.Text == "")
+                {
+                    MessageBox.Show("Username and Password fields cannot be left empty.", "SIGN UP FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtPassword.Text == txtConPassword.Text)
+                {
+
+                    string username = txtUsername.Text;
+                    string password = txtPassword.Text;
+                    if (username.EndsWith("_admin", StringComparison.OrdinalIgnoreCase))
+                    {
+                        MessageBox.Show("Oops! It seems like you're trying to create an admin account. Please use a different username.", "ACCESS DENIED!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtUsername.Text = "";
+                        txtPassword.Text = "";
+                        txtConPassword.Text = "";
+                        return;
+                    }
+
+                    if (userManager.CheckUserExists(username))
+                    {
+                        MessageBox.Show("Username already exists. Please choose a different username.");
+                        txtUsername.Text = "";
+                        txtPassword.Text = "";
+                        txtConPassword.Text = "";
+                    }
+                    else
+                    {
+                        userManager.RegisterUser(username, password);
+                        MessageBox.Show("Registration successful!", "SUCCESS!");
+                        this.Close(); // Close the registration form after successful registration
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Password mismatch. Please try again.", "SIGN UP FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtConPassword.Text = "";
+                }
             }
-
-            else if (txtPassword.Text == txtConPassword.Text)
-            {
-                string username = txtUsername.Text;
-                string password = txtPassword.Text;
-
-
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtConPassword.Text = "";
-
-
-                MessageBox.Show("Registration successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-
             else
             {
-                MessageBox.Show("Password does not match. Please try again", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPassword.Text = "";
-                txtConPassword.Text = "";
-                txtPassword.Focus();
+                MessageBox.Show("User Managment not initialized.");
             }
         }
+
 
         private void logIn_button_Click(object sender, EventArgs e)
         {
             new LoginPage().Show();
             this.Hide();
-           
+
         }
     }
 }
