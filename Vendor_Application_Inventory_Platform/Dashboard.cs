@@ -39,7 +39,7 @@ namespace Vendor_Application_Inventory_Platform
         }
 
         //
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.pnlFormLoader.Controls.Clear();
             frmProfilePrev frmProfilePrev_Vrb = new frmProfilePrev() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -70,7 +70,7 @@ namespace Vendor_Application_Inventory_Platform
 
 
         //
-        private void homeBtn_Click(object sender, EventArgs e)
+        private void homeBtn_Click_1(object sender, EventArgs e)
         {
             pnlNav.Width = homeBtn.Width;
             pnlNav.Left = homeBtn.Left;
@@ -98,7 +98,7 @@ namespace Vendor_Application_Inventory_Platform
         }
 
         //
-        private void homeBtn_Leave(object sender, EventArgs e)
+        private void homeBtn_Leave_1(object sender, EventArgs e)
         {
             homeBtn.BackColor = Color.FromArgb(255, 255, 255);
         }
@@ -136,11 +136,6 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
-        private void vendorBtn_Click_1(object sender, EventArgs e)
-        {
-            new frmVendors().Show();
-           
-        }
     }
 }
 
