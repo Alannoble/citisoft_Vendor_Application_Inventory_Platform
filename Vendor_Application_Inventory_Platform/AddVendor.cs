@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Vendor_Application_Inventory_Platform
 {
-    public partial class adminDashboard : UserControl
+    public partial class AddVendor : UserControl
     {
-        public adminDashboard()
+        public AddVendor()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -32,12 +22,12 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
