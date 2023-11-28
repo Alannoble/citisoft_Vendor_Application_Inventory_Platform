@@ -21,5 +21,10 @@ namespace Vendor_Application_Inventory_Platform
         {
             Application.Exit();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
