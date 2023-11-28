@@ -103,7 +103,6 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::Vendor_Application_Inventory_Platform.Properties.Resources.icons8_logout_251;
             this.button4.Location = new System.Drawing.Point(20, 515);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(35, 35);

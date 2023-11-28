@@ -41,7 +41,7 @@ namespace Vendor_Application_Inventory_Platform
             MessageBox.Show("Welcome to CITISOFT");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Login_button_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
@@ -55,42 +55,23 @@ namespace Vendor_Application_Inventory_Platform
                 new MainForm().Show();
                 this.Hide();
             }
+            else
             {
                 MessageBox.Show("Invalid username or Password");
             }
 
-            // if (username == "" && password == "")
+
+            if (username == "" && password == "")
             {
-                //   MessageBox.Show("Username and Password cannot be left empty, Please try again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username and Password cannot be left empty, Please try again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                // username = "";
-                //password = "";
-                //txtUsername.Focus();
-                //}
-                // else
-                // {
-                //   try
-                // {
-                //   string query = "SELECT * FROM users WHERE username = '" + username + "' and password = '" + password + "'";
-                // conn.Open();
-                // cmd = new SqlCommand(query, conn);
-                //reader = cmd.ExceptionReader();
-                //if(!reader.Read())
-                //{
-                //    MessageBox.Show("Wrong username or password!","Login Failed",MessageBoxButtons.OK, MessageBoxIcon.Error); 
-                // /}
-
-                //  }catch (SQLException ex)
-                //{
-
-                //}
-                //finally
-                // {
-                //  conn.Close();
-                //}
-
+                username = "";
+                password = "";
+                txtUsername.Focus();
             }
         }
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -102,7 +83,7 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SignUp_button_Click_1(object sender, EventArgs e)
         {
             new SignUp_Page().Show();
             this.Hide();
@@ -162,5 +143,21 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
