@@ -41,5 +41,10 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

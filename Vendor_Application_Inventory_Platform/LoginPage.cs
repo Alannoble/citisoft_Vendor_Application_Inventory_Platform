@@ -36,16 +36,18 @@ namespace Vendor_Application_Inventory_Platform
 
 
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("Welcome to CITISOFT");
-        }
+
+
 
         private void Login_button_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            if (username.Equals("citisoft") && password.Equals("citisoft")) //  NametextBox1_TextChanged. == "citisoft" && textBox1_TextChanged == "citisoft")
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Username or Password cannot be left empty, Please try again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (username.Equals("citisoft") && password.Equals("citisoft")) //  NametextBox1_TextChanged. == "citisoft" && textBox1_TextChanged == "citisoft")
             {
                 new Dashboard().Show();
                 this.Hide();
@@ -61,14 +63,7 @@ namespace Vendor_Application_Inventory_Platform
             }
 
 
-            if (username == "" && password == "")
-            {
-                MessageBox.Show("Username and Password cannot be left empty, Please try again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                username = "";
-                password = "";
-                txtUsername.Focus();
-            }
         }
 
 

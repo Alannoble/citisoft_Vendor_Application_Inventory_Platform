@@ -28,324 +28,349 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            panel3 = new Panel();
+            panel2 = new Panel();
+            panel4 = new Panel();
+            button4 = new Button();
+            button5 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            pictureBox1 = new PictureBox();
+            textBox6 = new TextBox();
+            label7 = new Label();
+            textBox5 = new TextBox();
+            label6 = new Label();
+            textBox4 = new TextBox();
+            label5 = new Label();
+            textBox3 = new TextBox();
+            label4 = new Label();
+            textBox2 = new TextBox();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(37, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1099, 400);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Location = new System.Drawing.Point(0, 397);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1099, 335);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel3.Location = new System.Drawing.Point(0, 397);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1099, 335);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.textBox4);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(40, 442);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1099, 294);
-            this.panel4.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(20, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 34);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Vendor Data";
+            panel1.BackColor = SystemColors.ButtonHighlight;
+            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(panel2);
+            panel1.Location = new Point(63, 41);
+            panel1.Margin = new Padding(5, 5, 5, 5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1868, 656);
+            panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1061, 299);
-            this.dataGridView1.TabIndex = 4;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(34, 131);
+            dataGridView1.Margin = new Padding(5, 5, 5, 5);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(1804, 490);
+            dataGridView1.TabIndex = 4;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(18, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Vendor ID";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(34, 41);
+            label1.Margin = new Padding(5, 0, 5, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(286, 57);
+            label1.TabIndex = 3;
+            label1.Text = "Vendor Data";
             // 
-            // textBox1
+            // panel3
             // 
-            this.textBox1.Location = new System.Drawing.Point(227, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 31);
-            this.textBox1.TabIndex = 1;
+            panel3.BackColor = SystemColors.ButtonHighlight;
+            panel3.Location = new Point(0, 651);
+            panel3.Margin = new Padding(5, 5, 5, 5);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1868, 549);
+            panel3.TabIndex = 2;
             // 
-            // textBox2
+            // panel2
             // 
-            this.textBox2.Location = new System.Drawing.Point(227, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(219, 31);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            panel2.BackColor = SystemColors.ButtonHighlight;
+            panel2.Location = new Point(0, 651);
+            panel2.Margin = new Padding(5, 5, 5, 5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1868, 549);
+            panel2.TabIndex = 1;
             // 
-            // label3
+            // panel4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(18, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Company Name";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(227, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(219, 31);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(18, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 24);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Company Website";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(226, 142);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(219, 31);
-            this.textBox4.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(17, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Company Address";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(790, 22);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(219, 31);
-            this.textBox5.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(581, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 24);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Software Name";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(790, 87);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(219, 31);
-            this.textBox6.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(581, 94);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 24);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Type Of Software";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(596, 150);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 127);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(752, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Import";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(46, 237);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 34);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(160, 237);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 34);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = false;
+            panel4.BackColor = SystemColors.ButtonHighlight;
+            panel4.Controls.Add(button4);
+            panel4.Controls.Add(button5);
+            panel4.Controls.Add(button3);
+            panel4.Controls.Add(button2);
+            panel4.Controls.Add(button1);
+            panel4.Controls.Add(pictureBox1);
+            panel4.Controls.Add(textBox6);
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(textBox5);
+            panel4.Controls.Add(label6);
+            panel4.Controls.Add(textBox4);
+            panel4.Controls.Add(label5);
+            panel4.Controls.Add(textBox3);
+            panel4.Controls.Add(label4);
+            panel4.Controls.Add(textBox2);
+            panel4.Controls.Add(label3);
+            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(label2);
+            panel4.Location = new Point(68, 725);
+            panel4.Margin = new Padding(5, 5, 5, 5);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1868, 482);
+            panel4.TabIndex = 3;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(384, 237);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 34);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = false;
+            button4.BackColor = Color.FromArgb(33, 11, 97);
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.CheckedBackColor = Color.FromArgb(75, 8, 138);
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 8, 138);
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(75, 8, 138);
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(653, 389);
+            button4.Margin = new Padding(5, 5, 5, 5);
+            button4.Name = "button4";
+            button4.Size = new Size(160, 56);
+            button4.TabIndex = 17;
+            button4.Text = "Add";
+            button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(270, 237);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 34);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = false;
+            button5.BackColor = Color.FromArgb(33, 11, 97);
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.CheckedBackColor = Color.FromArgb(75, 8, 138);
+            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 8, 138);
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(75, 8, 138);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(459, 389);
+            button5.Margin = new Padding(5, 5, 5, 5);
+            button5.Name = "button5";
+            button5.Size = new Size(160, 56);
+            button5.TabIndex = 16;
+            button5.Text = "Add";
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(33, 11, 97);
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.CheckedBackColor = Color.FromArgb(75, 8, 138);
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 8, 138);
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(75, 8, 138);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(272, 389);
+            button3.Margin = new Padding(5, 5, 5, 5);
+            button3.Name = "button3";
+            button3.Size = new Size(160, 56);
+            button3.TabIndex = 15;
+            button3.Text = "Add";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(33, 11, 97);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.CheckedBackColor = Color.FromArgb(75, 8, 138);
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 8, 138);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(75, 8, 138);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(78, 389);
+            button2.Margin = new Padding(5, 5, 5, 5);
+            button2.Name = "button2";
+            button2.Size = new Size(160, 56);
+            button2.TabIndex = 14;
+            button2.Text = "Add";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(33, 11, 97);
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(75, 8, 138);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 8, 138);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(75, 8, 138);
+            button1.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(1278, 313);
+            button1.Margin = new Padding(5, 5, 5, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(190, 56);
+            button1.TabIndex = 13;
+            button1.Text = "Import";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(1013, 246);
+            pictureBox1.Margin = new Padding(5, 5, 5, 5);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(255, 208);
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(1343, 143);
+            textBox6.Margin = new Padding(5, 5, 5, 5);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(370, 47);
+            textBox6.TabIndex = 11;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(988, 154);
+            label7.Margin = new Padding(5, 0, 5, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(281, 41);
+            label7.TabIndex = 10;
+            label7.Text = "Type Of Software";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(1343, 36);
+            textBox5.Margin = new Padding(5, 5, 5, 5);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(370, 47);
+            textBox5.TabIndex = 9;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(988, 48);
+            label6.Margin = new Padding(5, 0, 5, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(249, 41);
+            label6.TabIndex = 8;
+            label6.Text = "Software Name";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(384, 233);
+            textBox4.Margin = new Padding(5, 5, 5, 5);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(370, 47);
+            textBox4.TabIndex = 7;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(29, 244);
+            label5.Margin = new Padding(5, 0, 5, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(287, 41);
+            label5.TabIndex = 6;
+            label5.Text = "Company Address";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(386, 157);
+            textBox3.Margin = new Padding(5, 5, 5, 5);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(370, 47);
+            textBox3.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(31, 169);
+            label4.Margin = new Padding(5, 0, 5, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(289, 41);
+            label4.TabIndex = 4;
+            label4.Text = "Company Website";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(386, 87);
+            textBox2.Margin = new Padding(5, 5, 5, 5);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(370, 47);
+            textBox2.TabIndex = 3;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(31, 98);
+            label3.Margin = new Padding(5, 0, 5, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(257, 41);
+            label3.TabIndex = 2;
+            label3.Text = "Company Name";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(386, 20);
+            textBox1.Margin = new Padding(5, 5, 5, 5);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(370, 47);
+            textBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(31, 31);
+            label2.Margin = new Padding(5, 0, 5, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(171, 41);
+            label2.TabIndex = 0;
+            label2.Text = "Vendor ID";
+            label2.Click += label2_Click;
             // 
             // AddVendor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
-            this.Name = "AddVendor";
-            this.Size = new System.Drawing.Size(1175, 765);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel4);
+            Controls.Add(panel1);
+            Margin = new Padding(5, 5, 5, 5);
+            Name = "AddVendor";
+            Size = new Size(1998, 1255);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

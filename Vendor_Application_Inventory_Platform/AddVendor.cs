@@ -31,5 +31,10 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

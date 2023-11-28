@@ -47,9 +47,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveBorder;
-            label1.Location = new Point(136, 549);
+            label1.Location = new Point(289, 1125);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(178, 20);
+            label1.Size = new Size(353, 41);
             label1.TabIndex = 19;
             label1.Text = "Already have an account?";
             // 
@@ -57,9 +58,10 @@
             // 
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Image = Properties.Resources.Screenshot_2023_11_10_004008;
-            pictureBox3.Location = new Point(-1, 0);
+            pictureBox3.Location = new Point(-2, 0);
+            pictureBox3.Margin = new Padding(6, 6, 6, 6);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(125, 62);
+            pictureBox3.Size = new Size(266, 127);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 18;
             pictureBox3.TabStop = false;
@@ -73,9 +75,10 @@
             Password_label.FlatStyle = FlatStyle.Popup;
             Password_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             Password_label.ForeColor = SystemColors.InactiveCaption;
-            Password_label.Location = new Point(57, 382);
+            Password_label.Location = new Point(121, 783);
+            Password_label.Margin = new Padding(6, 0, 6, 0);
             Password_label.Name = "Password_label";
-            Password_label.Size = new Size(155, 23);
+            Password_label.Size = new Size(311, 46);
             Password_label.TabIndex = 14;
             Password_label.Text = "Confirm Password";
             // 
@@ -88,9 +91,10 @@
             username_label.FlatStyle = FlatStyle.Popup;
             username_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             username_label.ForeColor = SystemColors.InactiveCaption;
-            username_label.Location = new Point(57, 314);
+            username_label.Location = new Point(121, 644);
+            username_label.Margin = new Padding(6, 0, 6, 0);
             username_label.Name = "username_label";
-            username_label.Size = new Size(84, 23);
+            username_label.Size = new Size(171, 46);
             username_label.TabIndex = 13;
             username_label.Text = "Password";
             // 
@@ -99,12 +103,12 @@
             txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPassword.BackColor = SystemColors.Control;
             txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Location = new Point(57, 341);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Location = new Point(121, 699);
+            txtPassword.Margin = new Padding(6, 8, 6, 8);
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '.';
-            txtPassword.Size = new Size(322, 27);
+            txtPassword.Size = new Size(684, 55);
             txtPassword.TabIndex = 11;
             // 
             // Register_button
@@ -116,10 +120,10 @@
             Register_button.FlatStyle = FlatStyle.Flat;
             Register_button.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Register_button.ForeColor = Color.White;
-            Register_button.Location = new Point(114, 474);
-            Register_button.Margin = new Padding(3, 4, 3, 4);
+            Register_button.Location = new Point(242, 972);
+            Register_button.Margin = new Padding(6, 8, 6, 8);
             Register_button.Name = "Register_button";
-            Register_button.Size = new Size(207, 53);
+            Register_button.Size = new Size(440, 109);
             Register_button.TabIndex = 17;
             Register_button.Text = "REGISTER";
             Register_button.UseVisualStyleBackColor = false;
@@ -132,10 +136,10 @@
             logIn_button.FlatAppearance.BorderSize = 0;
             logIn_button.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             logIn_button.ForeColor = SystemColors.Highlight;
-            logIn_button.Location = new Point(156, 573);
-            logIn_button.Margin = new Padding(3, 4, 3, 4);
+            logIn_button.Location = new Point(332, 1175);
+            logIn_button.Margin = new Padding(6, 8, 6, 8);
             logIn_button.Name = "logIn_button";
-            logIn_button.Size = new Size(120, 45);
+            logIn_button.Size = new Size(255, 92);
             logIn_button.TabIndex = 16;
             logIn_button.Text = "Log In";
             logIn_button.UseVisualStyleBackColor = false;
@@ -146,11 +150,11 @@
             txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtUsername.BackColor = SystemColors.Control;
             txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Location = new Point(57, 270);
-            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Location = new Point(121, 554);
+            txtUsername.Margin = new Padding(6, 8, 6, 8);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(322, 27);
+            txtUsername.Size = new Size(684, 55);
             txtUsername.TabIndex = 11;
             // 
             // label2
@@ -162,9 +166,10 @@
             label2.FlatStyle = FlatStyle.Popup;
             label2.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.InactiveCaption;
-            label2.Location = new Point(57, 243);
+            label2.Location = new Point(121, 498);
+            label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(89, 23);
+            label2.Size = new Size(180, 46);
             label2.TabIndex = 13;
             label2.Text = "Username";
             // 
@@ -174,10 +179,10 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("MS UI Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.HotTrack;
-            label3.Location = new Point(57, 112);
+            label3.Location = new Point(121, 230);
             label3.Margin = new Padding(0);
             label3.Name = "label3";
-            label3.Size = new Size(334, 60);
+            label3.Size = new Size(657, 120);
             label3.TabIndex = 20;
             label3.Text = "Get Started";
             // 
@@ -186,21 +191,21 @@
             txtConPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtConPassword.BackColor = SystemColors.Control;
             txtConPassword.BorderStyle = BorderStyle.None;
-            txtConPassword.Location = new Point(57, 409);
-            txtConPassword.Margin = new Padding(3, 4, 3, 4);
+            txtConPassword.Location = new Point(121, 838);
+            txtConPassword.Margin = new Padding(6, 8, 6, 8);
             txtConPassword.Multiline = true;
             txtConPassword.Name = "txtConPassword";
             txtConPassword.PasswordChar = '•';
-            txtConPassword.Size = new Size(322, 27);
+            txtConPassword.Size = new Size(684, 55);
             txtConPassword.TabIndex = 11;
             // 
             // SignUp_Page
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(441, 739);
+            ClientSize = new Size(937, 1515);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
@@ -212,8 +217,7 @@
             Controls.Add(txtPassword);
             Controls.Add(Register_button);
             Controls.Add(logIn_button);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "SignUp_Page";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SignUp";
