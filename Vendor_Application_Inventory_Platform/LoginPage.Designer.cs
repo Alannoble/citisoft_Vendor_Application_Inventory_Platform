@@ -41,6 +41,7 @@
             pictureBox3 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
+            btnLogin = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -209,10 +210,12 @@
             // 
             // LoginPage
             // 
+            AcceptButton = Login_button;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(441, 739);
+            Controls.Add(btnLogin);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
@@ -252,5 +255,6 @@
         private PictureBox pictureBox3;
         private Label label1;
         private Label label2;
+        private Button btnLogin;
     }
 }

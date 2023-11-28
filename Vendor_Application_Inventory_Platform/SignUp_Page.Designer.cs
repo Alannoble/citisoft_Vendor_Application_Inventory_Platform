@@ -103,9 +103,9 @@
             txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '.';
+            txtPassword.PasswordChar = '•';
             txtPassword.Size = new Size(322, 27);
-            txtPassword.TabIndex = 11;
+            txtPassword.TabIndex = 1;
             // 
             // Register_button
             // 
@@ -120,7 +120,7 @@
             Register_button.Margin = new Padding(3, 4, 3, 4);
             Register_button.Name = "Register_button";
             Register_button.Size = new Size(207, 53);
-            Register_button.TabIndex = 17;
+            Register_button.TabIndex = 3;
             Register_button.Text = "REGISTER";
             Register_button.UseVisualStyleBackColor = false;
             Register_button.Click += Register_button_Click;
@@ -151,7 +151,7 @@
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(322, 27);
-            txtUsername.TabIndex = 11;
+            txtUsername.TabIndex = 0;
             // 
             // label2
             // 
@@ -192,10 +192,11 @@
             txtConPassword.Name = "txtConPassword";
             txtConPassword.PasswordChar = '•';
             txtConPassword.Size = new Size(322, 27);
-            txtConPassword.TabIndex = 11;
+            txtConPassword.TabIndex = 2;
             // 
             // SignUp_Page
             // 
+            AcceptButton = Register_button;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;

@@ -63,11 +63,11 @@
             // 
             // profileBindingSource
             // 
-            profileBindingSource.DataSource = typeof(Profile);
+            profileBindingSource.DataSource = typeof(UserManagment);
             // 
             // profileBindingSource1
             // 
-            profileBindingSource1.DataSource = typeof(Profile);
+            profileBindingSource1.DataSource = typeof(UserManagment);
             // 
             // dataGridView1
             // 

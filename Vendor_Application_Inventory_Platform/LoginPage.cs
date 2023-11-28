@@ -16,6 +16,13 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class LoginPage : Form
     {
+        private UserManagment userManager;
+
+        public LoginPage(UserManagment userManager)
+        {
+            InitializeComponent();
+            this.userManager = userManager;
+        }
 
         static SqlConnection conn = null!;
         static SqlConnection cmd = null!;
@@ -25,6 +32,7 @@ namespace Vendor_Application_Inventory_Platform
         public LoginPage()
         {
             InitializeComponent();
+            userManager = new UserManagment();
             Database_Connection();
         }
 
@@ -43,32 +51,49 @@ namespace Vendor_Application_Inventory_Platform
 
         private void Login_button_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            if (username.Equals("citisoft") && password.Equals("citisoft")) //  NametextBox1_TextChanged. == "citisoft" && textBox1_TextChanged == "citisoft")
+            if (userManager != null)
             {
-                new Dashboard().Show();
-                this.Hide();
-            }
-            else if (username.Equals("Admin") && password.Equals("Password"))
-            {
-                new MainForm().Show();
-                this.Hide();
+
+                if (txtUsername.Text == "" && txtPassword.Text == "")
+                {
+                    MessageBox.Show("Username and Password fields cannot be left empty.", "LOGIN FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    string username = txtUsername.Text;
+                    string password = txtPassword.Text;
+
+                    if (userManager.CheckCredentials(username, password))
+                    {
+                        if (IsAdminUser(username))
+                        {
+                            // Open the admin form
+                            MainForm adminForm = new MainForm();
+                            adminForm.Show();
+                        }
+                        else
+                        {
+                            // Open the normal user form
+                            Dashboard normalUserForm = new Dashboard();
+                            normalUserForm.Show();
+                        }
+
+                        MessageBox.Show("Login successful!");
+                        this.Hide(); // Close the login form after successful login
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password!");
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Invalid username or Password");
+                MessageBox.Show("User Managment not initialized.");
             }
 
 
-            if (username == "" && password == "")
-            {
-                MessageBox.Show("Username and Password cannot be left empty, Please try again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                username = "";
-                password = "";
-                txtUsername.Focus();
-            }
         }
 
 
@@ -85,8 +110,8 @@ namespace Vendor_Application_Inventory_Platform
 
         private void SignUp_button_Click_1(object sender, EventArgs e)
         {
-            new SignUp_Page().Show();
-            this.Hide();
+            SignUp_Page registrationForm = new SignUp_Page(userManager);
+            registrationForm.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -158,6 +183,11 @@ namespace Vendor_Application_Inventory_Platform
         {
             Application.Exit();
         }
+
+            private bool IsAdminUser(string username)
+            {
+               return username.EndsWith("_admin", StringComparison.OrdinalIgnoreCase);
+            }
 
     }
 }
