@@ -41,5 +41,27 @@ namespace Vendor_Application_Inventory_Platform
         {
             Application.Exit();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            new AddVendor().Show();
+            this.Close();   
+
+        }
     }
 }

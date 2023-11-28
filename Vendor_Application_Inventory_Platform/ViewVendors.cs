@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace Vendor_Application_Inventory_Platform
 {
-    public partial class frmDashboard : Form
+    public partial class ViewVendors : UserControl
     {
-        public frmDashboard()
+        public ViewVendors()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
