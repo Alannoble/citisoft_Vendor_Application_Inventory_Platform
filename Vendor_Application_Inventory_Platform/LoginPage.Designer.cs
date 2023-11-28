@@ -34,22 +34,22 @@
             txtPassword = new TextBox();
             txtUsername = new TextBox();
             Password_label = new Label();
+            username_label = new Label();
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             Forgotpassword_button = new Label();
             pictureBox3 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             btnLogin = new Button();
-            panel1 = new Panel();
-            username_label = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // SignUp_button
             // 
-            SignUp_button.Anchor = AnchorStyles.None;
+            SignUp_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SignUp_button.BackColor = Color.Transparent;
             SignUp_button.Cursor = Cursors.Hand;
             SignUp_button.FlatAppearance.BorderSize = 0;
@@ -66,7 +66,7 @@
             // 
             // Login_button
             // 
-            Login_button.Anchor = AnchorStyles.None;
+            Login_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Login_button.BackColor = Color.DodgerBlue;
             Login_button.Cursor = Cursors.Hand;
             Login_button.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -82,7 +82,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.None;
+            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPassword.BackColor = SystemColors.Control;
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Location = new Point(121, 413);
@@ -94,7 +94,7 @@
             // 
             // txtUsername
             // 
-            txtUsername.Anchor = AnchorStyles.None;
+            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtUsername.BackColor = SystemColors.Control;
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Cursor = Cursors.IBeam;
@@ -106,8 +106,9 @@
             // 
             // Password_label
             // 
-            Password_label.Anchor = AnchorStyles.None;
+            Password_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Password_label.AutoEllipsis = true;
+            Password_label.AutoSize = true;
             Password_label.BackColor = Color.Transparent;
             Password_label.FlatStyle = FlatStyle.Popup;
             Password_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -118,18 +119,46 @@
             Password_label.TabIndex = 5;
             Password_label.Text = "Password";
             // 
+            // username_label
+            // 
+            username_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            username_label.AutoEllipsis = true;
+            username_label.AutoSize = true;
+            username_label.BackColor = Color.Transparent;
+            username_label.FlatStyle = FlatStyle.Popup;
+            username_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            username_label.ForeColor = SystemColors.InactiveCaption;
+            username_label.Location = new Point(121, 302);
+            username_label.Name = "username_label";
+            username_label.Size = new Size(89, 23);
+            username_label.TabIndex = 4;
+            username_label.Text = "Username";
+            // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Dock = DockStyle.Top;
-            pictureBox1.Location = new Point(0, 60);
+            pictureBox1.Location = new Point(121, 80);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(441, 200);
+            pictureBox1.Size = new Size(200, 200);
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(0, -1);
+            pictureBox2.Margin = new Padding(1);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(0, 357);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
+            pictureBox2.WaitOnLoad = true;
             // 
             // Forgotpassword_button
             // 
@@ -148,11 +177,10 @@
             // pictureBox3
             // 
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Dock = DockStyle.Left;
             pictureBox3.Image = Properties.Resources.Screenshot_2023_11_10_004008;
-            pictureBox3.Location = new Point(0, 0);
+            pictureBox3.Location = new Point(-1, 0);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(125, 60);
+            pictureBox3.Size = new Size(125, 62);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
@@ -160,7 +188,6 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveBorder;
@@ -172,7 +199,6 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Location = new Point(418, 4);
             label2.Margin = new Padding(2, 0, 2, 0);
@@ -182,37 +208,6 @@
             label2.Text = "X";
             label2.Click += label2_Click_2;
             // 
-            // btnLogin
-            // 
-            btnLogin.Location = new Point(0, 0);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(75, 23);
-            btnLogin.TabIndex = 0;
-            btnLogin.Click += btnLogin_Click;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(pictureBox3);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(441, 60);
-            panel1.TabIndex = 12;
-            // 
-            // username_label
-            // 
-            username_label.Anchor = AnchorStyles.None;
-            username_label.AutoEllipsis = true;
-            username_label.BackColor = Color.Transparent;
-            username_label.FlatStyle = FlatStyle.Popup;
-            username_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            username_label.ForeColor = SystemColors.InactiveCaption;
-            username_label.Location = new Point(121, 302);
-            username_label.Name = "username_label";
-            username_label.Size = new Size(89, 23);
-            username_label.TabIndex = 4;
-            username_label.Text = "Username";
-            // 
             // LoginPage
             // 
             AcceptButton = Login_button;
@@ -220,18 +215,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(441, 739);
-            Controls.Add(username_label);
             Controls.Add(btnLogin);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(pictureBox3);
             Controls.Add(Forgotpassword_button);
+            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(Password_label);
+            Controls.Add(username_label);
             Controls.Add(txtUsername);
             Controls.Add(txtPassword);
             Controls.Add(Login_button);
             Controls.Add(SignUp_button);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "LoginPage";
@@ -239,8 +235,8 @@
             Text = "Form1";
             Load += LoginPage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -252,13 +248,13 @@
         private TextBox txtPassword;
         private TextBox txtUsername;
         private Label Password_label;
+        private Label username_label;
         public PictureBox pictureBox1;
+        private PictureBox pictureBox2;
         private Label Forgotpassword_button;
         private PictureBox pictureBox3;
         private Label label1;
         private Label label2;
         private Button btnLogin;
-        private Panel panel1;
-        private Label username_label;
     }
 }
