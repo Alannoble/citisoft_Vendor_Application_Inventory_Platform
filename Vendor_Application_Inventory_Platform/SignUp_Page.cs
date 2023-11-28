@@ -34,7 +34,7 @@ namespace Vendor_Application_Inventory_Platform
                     string password = txtPassword.Text;
                     if (username.EndsWith("_admin", StringComparison.OrdinalIgnoreCase))
                     {
-                        MessageBox.Show("Oops! It seems like you're trying to create an admin account. Please use a different username.","ACCESS DENIED!",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Oops! It seems like you're trying to create an admin account. Please use a different username.", "ACCESS DENIED!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtUsername.Text = "";
                         txtPassword.Text = "";
                         txtConPassword.Text = "";
@@ -51,7 +51,7 @@ namespace Vendor_Application_Inventory_Platform
                     else
                     {
                         userManager.RegisterUser(username, password);
-                        MessageBox.Show("Registration successful!","SUCCESS!");
+                        MessageBox.Show("Registration successful!", "SUCCESS!");
                         this.Close(); // Close the registration form after successful registration
                     }
                 }

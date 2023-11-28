@@ -39,15 +39,20 @@
             label2 = new Label();
             label3 = new Label();
             txtConPassword = new TextBox();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveBorder;
-            label1.Location = new Point(136, 549);
+            label1.Location = new Point(132, 549);
             label1.Name = "label1";
             label1.Size = new Size(178, 20);
             label1.TabIndex = 19;
@@ -66,7 +71,7 @@
             // 
             // Password_label
             // 
-            Password_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Password_label.Anchor = AnchorStyles.None;
             Password_label.AutoEllipsis = true;
             Password_label.AutoSize = true;
             Password_label.BackColor = Color.Transparent;
@@ -81,7 +86,7 @@
             // 
             // username_label
             // 
-            username_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            username_label.Anchor = AnchorStyles.None;
             username_label.AutoEllipsis = true;
             username_label.AutoSize = true;
             username_label.BackColor = Color.Transparent;
@@ -96,7 +101,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtPassword.Anchor = AnchorStyles.None;
             txtPassword.BackColor = SystemColors.Control;
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Location = new Point(57, 341);
@@ -109,7 +114,7 @@
             // 
             // Register_button
             // 
-            Register_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Register_button.Anchor = AnchorStyles.None;
             Register_button.BackColor = Color.DodgerBlue;
             Register_button.Cursor = Cursors.Hand;
             Register_button.FlatAppearance.BorderSize = 0;
@@ -127,7 +132,7 @@
             // 
             // logIn_button
             // 
-            logIn_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            logIn_button.Anchor = AnchorStyles.None;
             logIn_button.BackColor = Color.Transparent;
             logIn_button.FlatAppearance.BorderSize = 0;
             logIn_button.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -143,7 +148,7 @@
             // 
             // txtUsername
             // 
-            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtUsername.Anchor = AnchorStyles.None;
             txtUsername.BackColor = SystemColors.Control;
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Location = new Point(57, 270);
@@ -155,7 +160,7 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.Anchor = AnchorStyles.None;
             label2.AutoEllipsis = true;
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
@@ -170,6 +175,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("MS UI Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point);
@@ -183,7 +189,7 @@
             // 
             // txtConPassword
             // 
-            txtConPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtConPassword.Anchor = AnchorStyles.None;
             txtConPassword.BackColor = SystemColors.Control;
             txtConPassword.BorderStyle = BorderStyle.None;
             txtConPassword.Location = new Point(57, 409);
@@ -194,6 +200,27 @@
             txtConPassword.Size = new Size(322, 27);
             txtConPassword.TabIndex = 2;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(pictureBox1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(441, 62);
+            panel1.TabIndex = 21;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Dock = DockStyle.Left;
+            pictureBox1.Image = Properties.Resources.Screenshot_2023_11_10_004008;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(125, 62);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
             // SignUp_Page
             // 
             AcceptButton = Register_button;
@@ -202,6 +229,7 @@
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(441, 739);
+            Controls.Add(panel1);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
@@ -219,6 +247,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SignUp";
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -236,5 +266,7 @@
         private Label label2;
         private Label label3;
         private TextBox txtConPassword;
+        private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }
