@@ -46,5 +46,10 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void adminDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

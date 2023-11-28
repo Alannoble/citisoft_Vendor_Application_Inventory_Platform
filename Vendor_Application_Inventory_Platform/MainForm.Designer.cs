@@ -49,6 +49,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(33, 11, 97);
+            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -75,6 +76,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(33, 11, 97);
+            panel2.BorderStyle = BorderStyle.Fixed3D;
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(label4);
@@ -194,7 +196,7 @@
             label1.Size = new Size(41, 41);
             label1.TabIndex = 0;
             label1.Text = "X";
-            label1.Click += label1_Click;
+            label1.Click += labexl1_Click;
             // 
             // MainForm
             // 

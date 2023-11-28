@@ -58,7 +58,7 @@
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Location = new Point(58, 71);
-            panel1.Margin = new Padding(5, 5, 5, 5);
+            panel1.Margin = new Padding(5);
             panel1.Name = "panel1";
             panel1.Size = new Size(1889, 354);
             panel1.TabIndex = 0;
@@ -70,7 +70,7 @@
             panel5.Controls.Add(label6);
             panel5.Controls.Add(pictureBox3);
             panel5.Location = new Point(1285, 54);
-            panel5.Margin = new Padding(5, 5, 5, 5);
+            panel5.Margin = new Padding(5);
             panel5.Name = "panel5";
             panel5.Size = new Size(510, 246);
             panel5.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             pictureBox3.Image = Properties.Resources.inactive;
             pictureBox3.Location = new Point(34, 67);
-            pictureBox3.Margin = new Padding(5, 5, 5, 5);
+            pictureBox3.Margin = new Padding(5);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(119, 115);
             pictureBox3.TabIndex = 2;
@@ -118,7 +118,7 @@
             panel4.Controls.Add(label4);
             panel4.Controls.Add(pictureBox2);
             panel4.Location = new Point(688, 54);
-            panel4.Margin = new Padding(5, 5, 5, 5);
+            panel4.Margin = new Padding(5);
             panel4.Name = "panel4";
             panel4.Size = new Size(510, 246);
             panel4.TabIndex = 1;
@@ -152,7 +152,7 @@
             // 
             pictureBox2.Image = Properties.Resources.icons8_employees_70;
             pictureBox2.Location = new Point(41, 67);
-            pictureBox2.Margin = new Padding(5, 5, 5, 5);
+            pictureBox2.Margin = new Padding(5);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(119, 115);
             pictureBox2.TabIndex = 1;
@@ -165,7 +165,7 @@
             panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox1);
             panel3.Location = new Point(71, 59);
-            panel3.Margin = new Padding(5, 5, 5, 5);
+            panel3.Margin = new Padding(5);
             panel3.Name = "panel3";
             panel3.Size = new Size(510, 246);
             panel3.TabIndex = 0;
@@ -200,7 +200,7 @@
             // 
             pictureBox1.Image = Properties.Resources.icons8_identification_documents_70;
             pictureBox1.Location = new Point(42, 62);
-            pictureBox1.Margin = new Padding(5, 5, 5, 5);
+            pictureBox1.Margin = new Padding(5);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(119, 115);
             pictureBox1.TabIndex = 0;
@@ -211,7 +211,7 @@
             // 
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.Location = new Point(54, 449);
-            panel2.Margin = new Padding(5, 5, 5, 5);
+            panel2.Margin = new Padding(5);
             panel2.Name = "panel2";
             panel2.Size = new Size(1889, 695);
             panel2.TabIndex = 1;
@@ -222,9 +222,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "adminDashboard";
+            RightToLeft = RightToLeft.No;
             Size = new Size(1998, 1255);
+            Load += adminDashboard_Load;
             panel1.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();

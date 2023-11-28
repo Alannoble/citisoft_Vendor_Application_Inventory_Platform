@@ -184,10 +184,10 @@ namespace Vendor_Application_Inventory_Platform
             Application.Exit();
         }
 
-            private bool IsAdminUser(string username)
-            {
-               return username.EndsWith("_admin", StringComparison.OrdinalIgnoreCase);
-            }
+        private bool IsAdminUser(string username)
+        {
+            return username.EndsWith("_admin", StringComparison.OrdinalIgnoreCase);
+        }
 
     }
 }
