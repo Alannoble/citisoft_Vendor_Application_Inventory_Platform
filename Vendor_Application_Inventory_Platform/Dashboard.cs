@@ -104,7 +104,7 @@ namespace Vendor_Application_Inventory_Platform
         }
 
         //
-        private void vendorBtn_Leave(object sender, EventArgs e)
+        private void vendorBtn_Leave_1(object sender, EventArgs e)
         {
             vendorBtn.BackColor = Color.FromArgb(255, 255, 255);
         }
@@ -144,6 +144,28 @@ namespace Vendor_Application_Inventory_Platform
         private void Dashboard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (WindowState != FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
