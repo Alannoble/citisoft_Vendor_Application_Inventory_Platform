@@ -59,7 +59,7 @@
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Image = Properties.Resources.Screenshot_2023_11_10_004008;
             pictureBox3.Location = new Point(-2, 0);
-            pictureBox3.Margin = new Padding(6, 6, 6, 6);
+            pictureBox3.Margin = new Padding(6);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(266, 127);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -217,10 +217,11 @@
             Controls.Add(txtPassword);
             Controls.Add(Register_button);
             Controls.Add(logIn_button);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "SignUp_Page";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SignUp";
+            Load += SignUp_Page_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();

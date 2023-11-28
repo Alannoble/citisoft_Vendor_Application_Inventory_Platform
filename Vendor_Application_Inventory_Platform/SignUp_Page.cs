@@ -67,5 +67,10 @@ namespace Vendor_Application_Inventory_Platform
             this.Hide();
 
         }
+
+        private void SignUp_Page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

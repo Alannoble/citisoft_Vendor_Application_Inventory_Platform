@@ -119,10 +119,8 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
-        private void Forgotpassword_button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Error", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-        }
+        
+        
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -154,5 +152,10 @@ namespace Vendor_Application_Inventory_Platform
             Application.Exit();
         }
 
+        private void label2_Click_3(object sender, EventArgs e)
+        {
+            MessageBox.Show("Error", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+        }
+        
     }
 }
