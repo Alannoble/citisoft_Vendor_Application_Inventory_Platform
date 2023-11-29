@@ -15,7 +15,7 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class AddVendor : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30;");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30");
 
         public AddVendor()
         {
@@ -37,8 +37,8 @@ namespace Vendor_Application_Inventory_Platform
 
         public void displayvendorData()
         {
-            vendorData ed = new vendorData();
-            List<vendorData> listData = ed.vendorListData();
+            vendorData vd = new vendorData();
+            List<vendorData> listData = vd.vendorListData();
 
             dataGridView1.DataSource = listData;
 
@@ -68,9 +68,10 @@ namespace Vendor_Application_Inventory_Platform
 
                         using(SqlCommand checkvm = new SqlCommand(checkvmID, connect))
                         {
+                            checkvm.Parameters.AddWithValue("@vmID", addVendor_id.Text.Trim());
                             int count = (int) checkvm.ExecuteScalar();
 
-                            if(count > 1)
+                            if(count >= 1)
                             {
                                 MessageBox.Show(addVendor_id.Text.Trim() + "is already taken",
                                      "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -84,13 +85,13 @@ namespace Vendor_Application_Inventory_Platform
                                     "VALUES(@vendor_id, @company_name, @company_website, @company_address " +
                                     ", @software_name, @type_of_software, @image , @insert_date)";
 
-                                string path = Path.Combine(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30;"
+                                string path = Path.Combine(@"C:\Users\91623\Source\Repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\Directory\"
                                  + addVendor_id.Text.Trim() + ".jpg");
 
 
                                 string directoryPath = Path.GetDirectoryName(path);
 
-                                if (Directory.Exists(directoryPath))
+                                if (!Directory.Exists(directoryPath))
                                 {
                                     Directory.CreateDirectory(directoryPath);
 
@@ -118,7 +119,7 @@ namespace Vendor_Application_Inventory_Platform
                                     MessageBox.Show("Added successfully!"
                                         , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                                    
 
                                 }
                             }

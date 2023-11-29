@@ -12,7 +12,6 @@ namespace Vendor_Application_Inventory_Platform
 
     class vendorData
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30");
 
 
         public int ID { set; get; }
@@ -22,7 +21,10 @@ namespace Vendor_Application_Inventory_Platform
         public string company_address { set; get; } 
         public string software_name  { set; get; }   
         public string type_of_software { set; get; }  
-        public string image { set; get; }   
+        public string image { set; get; }
+
+
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30");
 
 
         public List<vendorData> vendorListData()
@@ -43,17 +45,17 @@ namespace Vendor_Application_Inventory_Platform
 
                         while (reader.Read())
                         {
-                            vendorData ed = new vendorData();
-                            ed.ID = (int)reader["id"];
-                            ed.vendor_id = reader["vendor_id"].ToString();
-                            ed.company_name = reader["Company Name"].ToString(); 
-                            ed.company_website = reader ["Company Website"].ToString();
-                            ed.company_address = reader ["Company Address"].ToString();
-                            ed.software_name = reader["Software"].ToString();
-                            ed.type_of_software = reader ["Type of Software"].ToString();
-                            ed.image = reader["image"].ToString();
+                            vendorData vd = new vendorData();
+                            vd.ID = (int)reader["id"];
+                            vd.vendor_id = reader["vendor_id"].ToString();
+                            vd.company_name = reader["Company Name"].ToString(); 
+                            vd.company_website = reader ["Company Website"].ToString();
+                            vd.company_address = reader ["Company Address"].ToString();
+                            vd.software_name = reader["Software"].ToString();
+                            vd.type_of_software = reader ["Type of Software"].ToString();
+                            vd.image = reader["image"].ToString();
 
-                             listData.Add(ed);
+                             listData.Add(vd);
 
                         }   
                     }
