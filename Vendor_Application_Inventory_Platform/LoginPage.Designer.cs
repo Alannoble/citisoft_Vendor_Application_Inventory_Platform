@@ -80,6 +80,7 @@
             this.Login_button.TabIndex = 7;
             this.Login_button.Text = "Login";
             this.Login_button.UseVisualStyleBackColor = false;
+            this.Login_button.Click += new System.EventHandler(this.Login_button_Click_1);
             // 
             // txtPassword
             // 
