@@ -12,7 +12,7 @@ namespace Vendor_Application_Inventory_Platform
 
     class vendorData
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf; Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30");
 
 
         public int ID { set; get; }
@@ -20,12 +20,12 @@ namespace Vendor_Application_Inventory_Platform
         public string company_name { set; get; }
         public string company_website { set; get; } 
         public string company_address { set; get; } 
-        public string software_name { set; get; }   
+        public string software_name  { set; get; }   
         public string type_of_software { set; get; }  
         public string image { set; get; }   
 
 
-        public List<vendorData> vendorDataList()
+        public List<vendorData> vendorListData()
 
         {
             List<vendorData> listData = new List<vendorData>();
@@ -35,7 +35,7 @@ namespace Vendor_Application_Inventory_Platform
                 try
                 {
                     connect.Open();
-                    string selectData = "SELECT * FROM vendor WHERE delete_data is NULL";
+                    string selectData = "SELECT * FROM vendor ";
 
                     using(SqlCommand cmd = new SqlCommand(selectData, connect))
                     {

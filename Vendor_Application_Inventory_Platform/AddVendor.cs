@@ -15,7 +15,7 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class AddVendor : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30; Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30;");
 
         public AddVendor()
         {
@@ -38,7 +38,7 @@ namespace Vendor_Application_Inventory_Platform
         public void displayvendorData()
         {
             vendorData ed = new vendorData();
-            List<vendorData> listData = ed.vendorDataList();
+            List<vendorData> listData = ed.vendorListData();
 
             dataGridView1.DataSource = listData;
 
@@ -64,7 +64,7 @@ namespace Vendor_Application_Inventory_Platform
                     try
                     {
                         connect.Open();
-                        string checkvmID = "Select count(*) from vendor where vendor_id = @vmID";
+                        string checkvmID = "Select count(*) from vendor where vendor_id = @vmID and delete_date is NULL";
 
                         using(SqlCommand checkvm = new SqlCommand(checkvmID, connect))
                         {
@@ -84,7 +84,7 @@ namespace Vendor_Application_Inventory_Platform
                                     "VALUES(@vendor_id, @company_name, @company_website, @company_address " +
                                     ", @software_name, @type_of_software, @image , @insert_date)";
 
-                                string path = Path.Combine(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30" 
+                                string path = Path.Combine(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30;"
                                  + addVendor_id.Text.Trim() + ".jpg");
 
 
