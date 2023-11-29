@@ -98,5 +98,10 @@ namespace Vendor_Application_Inventory_Platform
             addVendor1.Visible = true;
             viewVendors1.Visible = false;
         }
+
+        private void adminDashboard1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

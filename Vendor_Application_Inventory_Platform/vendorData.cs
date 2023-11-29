@@ -12,7 +12,7 @@ namespace Vendor_Application_Inventory_Platform
 
     class vendorData
     {
-        SqlConnection connect = new SqlConnection(@"C:\USERS\91623\ONEDRIVE - ANGLIA RUSKIN UNIVERSITY\DOCUMENTS\VENDORDETAILS.MDF; Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf; Integrated Security=True;Connect Timeout=30");
 
 
         public int ID { set; get; }
@@ -28,7 +28,7 @@ namespace Vendor_Application_Inventory_Platform
         public List<vendorData> vendorDataList()
 
         {
-            List<vendorData> vendorDataList = new List<vendorData>();
+            List<vendorData> listData = new List<vendorData>();
 
             if(connect.State != ConnectionState.Open)
             {
@@ -53,7 +53,7 @@ namespace Vendor_Application_Inventory_Platform
                             ed.type_of_software = reader ["Type of Software"].ToString();
                             ed.image = reader["image"].ToString();
 
-                             vendorDataList.Add(ed);
+                             listData.Add(ed);
 
                         }   
                     }
@@ -66,12 +66,10 @@ namespace Vendor_Application_Inventory_Platform
                     finally
                 {
                     connect.Close();   
-                }
-                
+                } 
             }
-
+            return listData;
         }
             
-
     }
 }

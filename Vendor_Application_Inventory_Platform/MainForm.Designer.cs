@@ -233,6 +233,7 @@
             this.adminDashboard1.Name = "adminDashboard1";
             this.adminDashboard1.Size = new System.Drawing.Size(1175, 765);
             this.adminDashboard1.TabIndex = 4;
+            this.adminDashboard1.Load += new System.EventHandler(this.adminDashboard1_Load);
             // 
             // MainForm
             // 
