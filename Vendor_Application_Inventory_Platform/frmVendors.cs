@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,13 @@ namespace Vendor_Application_Inventory_Platform
 
     public partial class frmVendors : Form
     {
-        private List<UserManagment> profiles = new List<UserManagment>();
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\software\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True;Connect Timeout=30");
+
         public frmVendors()
         {
             InitializeComponent();
+            displayvendorData();
+
         }
 
         private void frmVendors_Load(object sender, EventArgs e)
@@ -36,6 +40,21 @@ namespace Vendor_Application_Inventory_Platform
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void frmVendors_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        public void displayvendorData()
+        {
+            vendorData vd = new vendorData();
+            List<vendorData> listData = vd.vendorListData();
+
+            dataGridView1.DataSource = listData;
+
 
         }
     }

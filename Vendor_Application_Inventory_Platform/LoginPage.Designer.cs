@@ -224,6 +224,7 @@
             this.label2.Size = new System.Drawing.Size(23, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click_3);
             // 
             // LoginPage
             // 

@@ -147,6 +147,25 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void vendorBtn_Click_1(object sender, EventArgs e)
+        {
+            pnlNav.Width = vendorBtn.Width;
+            pnlNav.Left = vendorBtn.Left;
+            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
+
+            this.pnlFormLoader.Controls.Clear();
+            frmVendors frmVendors_Vrb = new frmVendors() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
+            frmVendors_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.pnlFormLoader.Controls.Add(frmVendors_Vrb);
+            frmVendors_Vrb.Show();
+
+        }
+
+        private void Dashboard_Load_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

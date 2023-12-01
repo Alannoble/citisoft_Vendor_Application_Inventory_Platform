@@ -162,6 +162,9 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
-        
+        private void label2_Click_3(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

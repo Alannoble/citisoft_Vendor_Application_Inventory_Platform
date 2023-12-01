@@ -35,7 +35,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.addVendor_updateBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.addVendor_typeOfSoftware = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -113,7 +112,6 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.addVendor_updateBtn);
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.addVendor_typeOfSoftware);
             this.panel4.Controls.Add(this.label7);
@@ -131,23 +129,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1099, 294);
             this.panel4.TabIndex = 3;
-            // 
-            // addVendor_updateBtn
-            // 
-            this.addVendor_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.addVendor_updateBtn.FlatAppearance.BorderSize = 0;
-            this.addVendor_updateBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addVendor_updateBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addVendor_updateBtn.ForeColor = System.Drawing.Color.White;
-            this.addVendor_updateBtn.Location = new System.Drawing.Point(160, 237);
-            this.addVendor_updateBtn.Name = "addVendor_updateBtn";
-            this.addVendor_updateBtn.Size = new System.Drawing.Size(94, 34);
-            this.addVendor_updateBtn.TabIndex = 15;
-            this.addVendor_updateBtn.Text = "Modify";
-            this.addVendor_updateBtn.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -322,7 +303,6 @@
         private Label label7;
         private TextBox addVendor_softwareName;
         private Label label6;
-        private Button addVendor_updateBtn;
         private Button button2;
         private BindingSource vendorTableAdapterBindingSource;
         private BindingSource tableAdapterManagerBindingSource;
