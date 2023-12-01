@@ -15,13 +15,13 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class AddVendor : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\vendordatabase.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\software\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True;Connect Timeout=30");
 
         public AddVendor()
         {
             InitializeComponent();
 
-            //to display the data from database to data grid view 
+      
             displayvendorData();
         }
 
@@ -51,8 +51,8 @@ namespace Vendor_Application_Inventory_Platform
                 || addVendor_companyWebsite.Text == ""
                 || addVendor_companyAddress.Text == ""
                 || addVendor_softwareName.Text ==  ""
-                || addVendor_typeOfSoftware.Text == ""
-                || addVendor_picture.Image == null)
+                || addVendor_typeOfSoftware.Text == "" )
+                
             {
                 MessageBox.Show("Please fill all blank fields",
                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -64,7 +64,7 @@ namespace Vendor_Application_Inventory_Platform
                     try
                     {
                         connect.Open();
-                        string checkvmID = "Select count(*) from vendor where vendor_id = @vmID and delete_date is NULL";
+                        string checkvmID = "SELECT COUNT(*) from vendortable WHERE vendor_id = @vmID  ";
 
                         using(SqlCommand checkvm = new SqlCommand(checkvmID, connect))
                         {
@@ -79,45 +79,35 @@ namespace Vendor_Application_Inventory_Platform
                             else
                             {
                                 DateTime today = DateTime.Today;
-                                string insertData = "Insert into vendors" +
+                                string insertData = "Insert into vendortable" +
                                     "(vendor_id, company_name, company_website, " +
-                                    "company_address, software_name, type_of_software, image, insert_date)" +
-                                    "VALUES(@vendor_id, @company_name, @company_website, @company_address " +
-                                    ", @software_name, @type_of_software, @image , @insert_date)";
+                                    "company_address, software_name, type_of_software, insert_date)" +
+                                    "VALUES(@vmID, @company_name, @company_website, @company_address " +
+                                    ", @software_name, @type_of_software, @insert_date)";
 
-                                string path = Path.Combine(@"C:\Users\91623\Source\Repos\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\Directory\"
-                                 + addVendor_id.Text.Trim() + ".jpg");
+                                
 
-
-                                string directoryPath = Path.GetDirectoryName(path);
-
-                                if (!Directory.Exists(directoryPath))
-                                {
-                                    Directory.CreateDirectory(directoryPath);
-
-                                }
-
-                                File.Copy(addVendor_picture.ImageLocation, path, true);
+                                
 
                                 using(SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
-                                    cmd.Parameters.AddWithValue("@vendor_id", addVendor_id.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@vmID", addVendor_id.Text.Trim());
                                     cmd.Parameters.AddWithValue("@company_name", addVendor_companyName.Text.Trim());
                                     cmd.Parameters.AddWithValue("@company_website", addVendor_companyWebsite.Text.Trim());
                                     cmd.Parameters.AddWithValue("@company_address", addVendor_companyAddress.Text.Trim());
                                     cmd.Parameters.AddWithValue("@software_name", addVendor_softwareName.Text.Trim());
                                     cmd.Parameters.AddWithValue("@type_of_software", addVendor_typeOfSoftware.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@image", path);
                                     cmd.Parameters.AddWithValue("@insert_date", today);
 
 
                                     cmd.ExecuteNonQuery();
-
                                     displayvendorData();
 
 
                                     MessageBox.Show("Added successfully!"
                                         , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    
+                                   
 
                                     
 
@@ -144,6 +134,38 @@ namespace Vendor_Application_Inventory_Platform
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex != 1)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                addVendor_id.Text = row.Cells[1].Value.ToString();
+                addVendor_companyName.Text = row.Cells[2].Value.ToString(); 
+                addVendor_companyWebsite.Text = row.Cells[3].Value.ToString();
+                addVendor_companyAddress.Text = row.Cells[4].Value.ToString();
+                addVendor_softwareName.Text = row.Cells[5].Value.ToString();
+                addVendor_typeOfSoftware.Text = row.Cells[6].Value.ToString(); 
+
+            }
+                
+        }
+
+        private void addVendor_id_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableAdapterManagerBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -28,18 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.addVendor_clearBtn = new System.Windows.Forms.Button();
-            this.addVendor_deleteBtn = new System.Windows.Forms.Button();
             this.addVendor_updateBtn = new System.Windows.Forms.Button();
-            this.addVendor_addBtn = new System.Windows.Forms.Button();
-            this.addVendor_importBtn = new System.Windows.Forms.Button();
-            this.addVendor_picture = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.addVendor_typeOfSoftware = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.addVendor_softwareName = new System.Windows.Forms.TextBox();
@@ -52,10 +49,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.addVendor_id = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.vendorTableAdapterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addVendor_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorTableAdapterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableAdapterManagerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,17 +69,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1099, 400);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 80);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.Location = new System.Drawing.Point(22, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1061, 299);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Size = new System.Drawing.Size(1050, 291);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // label1
             // 
@@ -111,12 +113,8 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.addVendor_clearBtn);
-            this.panel4.Controls.Add(this.addVendor_deleteBtn);
             this.panel4.Controls.Add(this.addVendor_updateBtn);
-            this.panel4.Controls.Add(this.addVendor_addBtn);
-            this.panel4.Controls.Add(this.addVendor_importBtn);
-            this.panel4.Controls.Add(this.addVendor_picture);
+            this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.addVendor_typeOfSoftware);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.addVendor_softwareName);
@@ -134,40 +132,6 @@
             this.panel4.Size = new System.Drawing.Size(1099, 294);
             this.panel4.TabIndex = 3;
             // 
-            // addVendor_clearBtn
-            // 
-            this.addVendor_clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.addVendor_clearBtn.FlatAppearance.BorderSize = 0;
-            this.addVendor_clearBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_clearBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_clearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addVendor_clearBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addVendor_clearBtn.ForeColor = System.Drawing.Color.White;
-            this.addVendor_clearBtn.Location = new System.Drawing.Point(384, 237);
-            this.addVendor_clearBtn.Name = "addVendor_clearBtn";
-            this.addVendor_clearBtn.Size = new System.Drawing.Size(94, 34);
-            this.addVendor_clearBtn.TabIndex = 17;
-            this.addVendor_clearBtn.Text = "Clear";
-            this.addVendor_clearBtn.UseVisualStyleBackColor = false;
-            // 
-            // addVendor_deleteBtn
-            // 
-            this.addVendor_deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.addVendor_deleteBtn.FlatAppearance.BorderSize = 0;
-            this.addVendor_deleteBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_deleteBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addVendor_deleteBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addVendor_deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.addVendor_deleteBtn.Location = new System.Drawing.Point(270, 237);
-            this.addVendor_deleteBtn.Name = "addVendor_deleteBtn";
-            this.addVendor_deleteBtn.Size = new System.Drawing.Size(94, 34);
-            this.addVendor_deleteBtn.TabIndex = 16;
-            this.addVendor_deleteBtn.Text = "Delete";
-            this.addVendor_deleteBtn.UseVisualStyleBackColor = false;
-            // 
             // addVendor_updateBtn
             // 
             this.addVendor_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
@@ -182,51 +146,26 @@
             this.addVendor_updateBtn.Name = "addVendor_updateBtn";
             this.addVendor_updateBtn.Size = new System.Drawing.Size(94, 34);
             this.addVendor_updateBtn.TabIndex = 15;
-            this.addVendor_updateBtn.Text = "Update";
+            this.addVendor_updateBtn.Text = "Modify";
             this.addVendor_updateBtn.UseVisualStyleBackColor = false;
             // 
-            // addVendor_addBtn
+            // button2
             // 
-            this.addVendor_addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.addVendor_addBtn.FlatAppearance.BorderSize = 0;
-            this.addVendor_addBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addVendor_addBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addVendor_addBtn.ForeColor = System.Drawing.Color.White;
-            this.addVendor_addBtn.Location = new System.Drawing.Point(46, 237);
-            this.addVendor_addBtn.Name = "addVendor_addBtn";
-            this.addVendor_addBtn.Size = new System.Drawing.Size(94, 34);
-            this.addVendor_addBtn.TabIndex = 14;
-            this.addVendor_addBtn.Text = "Add";
-            this.addVendor_addBtn.UseVisualStyleBackColor = false;
-            this.addVendor_addBtn.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // addVendor_importBtn
-            // 
-            this.addVendor_importBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.addVendor_importBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addVendor_importBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_importBtn.FlatAppearance.BorderSize = 0;
-            this.addVendor_importBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_importBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addVendor_importBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addVendor_importBtn.ForeColor = System.Drawing.Color.White;
-            this.addVendor_importBtn.Location = new System.Drawing.Point(752, 191);
-            this.addVendor_importBtn.Name = "addVendor_importBtn";
-            this.addVendor_importBtn.Size = new System.Drawing.Size(112, 34);
-            this.addVendor_importBtn.TabIndex = 13;
-            this.addVendor_importBtn.Text = "Import";
-            this.addVendor_importBtn.UseVisualStyleBackColor = false;
-            // 
-            // addVendor_picture
-            // 
-            this.addVendor_picture.Location = new System.Drawing.Point(596, 150);
-            this.addVendor_picture.Name = "addVendor_picture";
-            this.addVendor_picture.Size = new System.Drawing.Size(150, 127);
-            this.addVendor_picture.TabIndex = 12;
-            this.addVendor_picture.TabStop = false;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(46, 237);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 34);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // addVendor_typeOfSoftware
             // 
@@ -327,6 +266,7 @@
             this.addVendor_id.Name = "addVendor_id";
             this.addVendor_id.Size = new System.Drawing.Size(219, 28);
             this.addVendor_id.TabIndex = 1;
+            this.addVendor_id.TextChanged += new System.EventHandler(this.addVendor_id_TextChanged);
             // 
             // label2
             // 
@@ -338,6 +278,10 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Vendor ID";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // tableAdapterManagerBindingSource
+            // 
+            this.tableAdapterManagerBindingSource.CurrentChanged += new System.EventHandler(this.tableAdapterManagerBindingSource_CurrentChanged);
             // 
             // AddVendor
             // 
@@ -353,7 +297,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addVendor_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorTableAdapterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableAdapterManagerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,7 +306,6 @@
         #endregion
 
         private Panel panel1;
-        private DataGridView dataGridView1;
         private Label label1;
         private Panel panel3;
         private Panel panel2;
@@ -379,10 +323,9 @@
         private TextBox addVendor_softwareName;
         private Label label6;
         private Button addVendor_updateBtn;
-        private Button addVendor_addBtn;
-        private Button addVendor_importBtn;
-        private PictureBox addVendor_picture;
-        private Button addVendor_clearBtn;
-        private Button addVendor_deleteBtn;
+        private Button button2;
+        private BindingSource vendorTableAdapterBindingSource;
+        private BindingSource tableAdapterManagerBindingSource;
+        private DataGridView dataGridView1;
     }
 }

@@ -85,8 +85,6 @@ namespace Vendor_Application_Inventory_Platform
 
         private void SignUp_button_Click_1(object sender, EventArgs e)
         {
-            new SignUp_Page().Show();
-            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -164,6 +162,6 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
-       
+        
     }
 }
