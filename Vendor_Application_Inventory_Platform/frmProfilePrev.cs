@@ -26,5 +26,37 @@ namespace Vendor_Application_Inventory_Platform
         {
             Application.Restart();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmContact contactForm = new frmContact();
+            contactForm.Show();
+            this.Hide();
+            DialogResult result = MessageBox.Show("Contact Us", "Contact Us", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(result == DialogResult.OK)
+            {
+                contactForm.Close();
+                if (Application.OpenForms["Dashboard"] != null)
+                {
+                    Application.OpenForms["Dashboard"].Close();
+                }
+
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+
+                
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

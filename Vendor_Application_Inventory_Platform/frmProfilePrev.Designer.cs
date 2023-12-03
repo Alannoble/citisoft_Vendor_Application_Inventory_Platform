@@ -43,11 +43,13 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Nirmala UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(0, 0);
+            button1.Margin = new Padding(6);
             button1.Name = "button1";
-            button1.Size = new Size(951, 70);
+            button1.Size = new Size(2021, 144);
             button1.TabIndex = 1;
             button1.Text = "Account";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -56,12 +58,14 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Nirmala UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(0, 70);
+            button2.Location = new Point(0, 144);
+            button2.Margin = new Padding(6);
             button2.Name = "button2";
-            button2.Size = new Size(951, 70);
+            button2.Size = new Size(2021, 144);
             button2.TabIndex = 1;
             button2.Text = "Settings";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -70,12 +74,14 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Nirmala UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(0, 140);
+            button3.Location = new Point(0, 288);
+            button3.Margin = new Padding(6);
             button3.Name = "button3";
-            button3.Size = new Size(951, 70);
+            button3.Size = new Size(2021, 144);
             button3.TabIndex = 1;
             button3.Text = "Help";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -84,9 +90,10 @@
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(0, 443);
+            button4.Location = new Point(0, 908);
+            button4.Margin = new Padding(6);
             button4.Name = "button4";
-            button4.Size = new Size(951, 63);
+            button4.Size = new Size(2021, 129);
             button4.TabIndex = 1;
             button4.Text = "QUIT";
             button4.UseVisualStyleBackColor = false;
@@ -99,9 +106,10 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(0, 414);
+            button5.Location = new Point(0, 849);
+            button5.Margin = new Padding(6);
             button5.Name = "button5";
-            button5.Size = new Size(951, 29);
+            button5.Size = new Size(2021, 59);
             button5.TabIndex = 2;
             button5.Text = "Log out";
             button5.UseVisualStyleBackColor = false;
@@ -109,16 +117,17 @@
             // 
             // frmProfilePrev
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
-            ClientSize = new Size(951, 506);
+            ClientSize = new Size(2021, 1037);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(6);
             Name = "frmProfilePrev";
             Text = "frmProfilePrev";
             ResumeLayout(false);

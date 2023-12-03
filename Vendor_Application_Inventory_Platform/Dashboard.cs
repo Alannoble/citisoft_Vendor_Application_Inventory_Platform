@@ -164,7 +164,66 @@ namespace Vendor_Application_Inventory_Platform
 
         private void Dashboard_Load_1(object sender, EventArgs e)
         {
-            Application.Exit();
+
+        }
+
+        private void pnlFormLoader_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            pnlNav.Width = vendorBtn.Width;
+            pnlNav.Left = vendorBtn.Left;
+            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
+
+            this.pnlFormLoader.Controls.Clear();
+            frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
+            frmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.pnlFormLoader.Controls.Add(frmDashboard_Vrb);
+            frmDashboard_Vrb.Show();
+        }
+
+        private void contactBtn_Click_1(object sender, EventArgs e)
+        {
+            pnlNav.Width = vendorBtn.Width;
+            pnlNav.Left = vendorBtn.Left;
+            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
+
+            this.pnlFormLoader.Controls.Clear();
+            frmContact frmContact_Vrb = new frmContact() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
+            frmContact_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.pnlFormLoader.Controls.Add(frmContact_Vrb);
+            frmContact_Vrb.Show();
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+            pnlNav.Width = vendorBtn.Width;
+            pnlNav.Left = vendorBtn.Left;
+            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
+
+            this.pnlFormLoader.Controls.Clear();
+            frmProfilePrev frmProfilePrev_Vrb = new frmProfilePrev() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
+            frmProfilePrev_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.pnlFormLoader.Controls.Add(frmProfilePrev_Vrb);
+            frmProfilePrev_Vrb.Show();
+        }
+
+        private void pnlFormLoader_Paint_3(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

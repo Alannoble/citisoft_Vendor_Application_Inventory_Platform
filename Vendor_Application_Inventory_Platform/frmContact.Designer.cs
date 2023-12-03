@@ -37,39 +37,44 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(65, 90);
+            label1.Location = new Point(138, 184);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(265, 62);
+            label1.Size = new Size(531, 125);
             label1.TabIndex = 0;
             label1.Text = "Contact Us";
             // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
-            panel1.Location = new Point(78, 172);
+            panel1.Location = new Point(166, 353);
+            panel1.Margin = new Padding(6, 6, 6, 6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(161, 10);
+            panel1.Size = new Size(342, 20);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
             // label2
             // 
             label2.Font = new Font("Nirmala UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(78, 212);
+            label2.Location = new Point(166, 435);
+            label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(585, 87);
+            label2.Size = new Size(1243, 178);
             label2.TabIndex = 2;
             label2.Text = "Please contact any of our locations listed below for further information about Citisoft, our team, and our capabilities";
             // 
             // frmContact
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(951, 506);
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
+            ClientSize = new Size(2021, 1037);
             Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(6, 6, 6, 6);
             Name = "frmContact";
             Text = "frmContact";
             ResumeLayout(false);
