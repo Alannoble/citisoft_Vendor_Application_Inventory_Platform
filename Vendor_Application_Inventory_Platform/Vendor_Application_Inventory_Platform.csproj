@@ -51,6 +51,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="batmon.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Database2.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
