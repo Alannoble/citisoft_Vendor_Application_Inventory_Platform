@@ -8,7 +8,10 @@ using System.Runtime.InteropServices;
 
 namespace Vendor_Application_Inventory_Platform
 {
+
     public partial class Dashboard : Form
+
+
     {
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -29,9 +32,7 @@ namespace Vendor_Application_Inventory_Platform
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            pnlNav.Width = homeBtn.Width;
-            pnlNav.Left = homeBtn.Left;
-            homeBtn.BackColor = Color.FromArgb(250, 250, 250);
+
 
             this.pnlFormLoader.Controls.Clear();
             frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
@@ -39,8 +40,32 @@ namespace Vendor_Application_Inventory_Platform
             this.pnlFormLoader.Controls.Add(frmDashboard_Vrb);
             frmDashboard_Vrb.Show();
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
 
-        //
+            // Check if the user clicked the X button
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Display a confirmation dialog
+                DialogResult result = MessageBox.Show("Do you really want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // If the user clicks "No," cancel the form closing
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                // If the user clicks "Yes," allow the form to close
+                else
+                {
+                    // Perform any additional cleanup or save operations if needed
+                    // ...
+
+                    // Close the application
+                    Application.Exit();
+                }
+            }
+        } 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.pnlFormLoader.Controls.Clear();
@@ -53,9 +78,7 @@ namespace Vendor_Application_Inventory_Platform
         //
         private void contactBtn_Click(object sender, EventArgs e)
         {
-            pnlNav.Width = contactBtn.Width;
-            pnlNav.Left = contactBtn.Left;
-            contactBtn.BackColor = Color.FromArgb(170, 170, 170);
+
 
             this.pnlFormLoader.Controls.Clear();
             frmContact frmContact_Vrb = new frmContact() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
@@ -74,9 +97,7 @@ namespace Vendor_Application_Inventory_Platform
         //
         private void homeBtn_Click_1(object sender, EventArgs e)
         {
-            pnlNav.Width = homeBtn.Width;
-            pnlNav.Left = homeBtn.Left;
-            homeBtn.BackColor = Color.FromArgb(170, 170, 170);
+
 
             this.pnlFormLoader.Controls.Clear();
             frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
@@ -88,9 +109,7 @@ namespace Vendor_Application_Inventory_Platform
         //
         private void vendorBtn_Click(object sender, EventArgs e)
         {
-            pnlNav.Width = vendorBtn.Width;
-            pnlNav.Left = vendorBtn.Left;
-            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
+
 
             this.pnlFormLoader.Controls.Clear();
             frmVendors frmVendors_Vrb = new frmVendors() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
@@ -150,9 +169,7 @@ namespace Vendor_Application_Inventory_Platform
 
         private void vendorBtn_Click_1(object sender, EventArgs e)
         {
-            pnlNav.Width = vendorBtn.Width;
-            pnlNav.Left = vendorBtn.Left;
-            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
+
 
             this.pnlFormLoader.Controls.Clear();
             frmVendors frmVendors_Vrb = new frmVendors() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
@@ -179,9 +196,7 @@ namespace Vendor_Application_Inventory_Platform
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            pnlNav.Width = vendorBtn.Width;
-            pnlNav.Left = vendorBtn.Left;
-            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
+
 
             this.pnlFormLoader.Controls.Clear();
             frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
@@ -192,9 +207,6 @@ namespace Vendor_Application_Inventory_Platform
 
         private void contactBtn_Click_1(object sender, EventArgs e)
         {
-            pnlNav.Width = vendorBtn.Width;
-            pnlNav.Left = vendorBtn.Left;
-            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
 
             this.pnlFormLoader.Controls.Clear();
             frmContact frmContact_Vrb = new frmContact() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
@@ -205,9 +217,6 @@ namespace Vendor_Application_Inventory_Platform
 
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
-            pnlNav.Width = vendorBtn.Width;
-            pnlNav.Left = vendorBtn.Left;
-            vendorBtn.BackColor = Color.FromArgb(170, 170, 170);
 
             this.pnlFormLoader.Controls.Clear();
             frmProfilePrev frmProfilePrev_Vrb = new frmProfilePrev() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false };
@@ -225,6 +234,14 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void pnlNav_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        
+
+           
     }
 }
 

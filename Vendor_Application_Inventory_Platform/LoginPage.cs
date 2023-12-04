@@ -166,5 +166,12 @@ namespace Vendor_Application_Inventory_Platform
         {
             Application.Exit();
         }
+
+        private void SignUp_button_Click(object sender, EventArgs e)
+        {
+            UserManagment userManager = new UserManagment();
+            SignUp_Page signUpPage = new SignUp_Page(userManager);
+            signUpPage.Show();
+        }
     }
 }
