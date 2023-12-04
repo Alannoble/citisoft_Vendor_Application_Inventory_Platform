@@ -57,5 +57,10 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace Vendor_Application_Inventory_Platform
                 try
                 {
                     connect.Open();
-                    string selectData = "SELECT * FROM vendortable ";
+                    string selectData = "SELECT * FROM vendortable WHERE delete_date is NULL ";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
@@ -51,7 +51,7 @@ namespace Vendor_Application_Inventory_Platform
                             vd.company_website = reader["company_website"].ToString();
                             vd.company_address = reader["company_address"].ToString();
                             vd.software_name = reader["software_name"].ToString();
-                            vd.type_of_software = reader["type_of_sotware"].ToString();
+                            vd.type_of_software = reader["type_of_software"].ToString();
 
 
                             listData.Add(vd);
