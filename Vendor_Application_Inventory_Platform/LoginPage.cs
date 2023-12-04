@@ -41,7 +41,7 @@ namespace Vendor_Application_Inventory_Platform
             MessageBox.Show("Welcome to CITISOFT");
         }
 
-        private void Login_button_Click_1(object sender, EventArgs e)
+        private void Login_button_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
@@ -173,5 +173,14 @@ namespace Vendor_Application_Inventory_Platform
             SignUp_Page signUpPage = new SignUp_Page(userManager);
             signUpPage.Show();
         }
+
+        private void LoginPage_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        
     }
 }

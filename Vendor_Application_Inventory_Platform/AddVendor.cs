@@ -63,7 +63,7 @@ namespace Vendor_Application_Inventory_Platform
                     try
                     {
                         connect.Open();
-                        string checkvmID = "SELECT COUNT(*) from vendortable WHERE vendor_id = @vmID  ";
+                        string checkvmID = "SELECT COUNT(*) from vendortable WHERE vendor_id = @vmID AND delete_date IS NULL";
 
                         using(SqlCommand checkvm = new SqlCommand(checkvmID, connect))
                         {
@@ -103,11 +103,12 @@ namespace Vendor_Application_Inventory_Platform
                                     displayvendorData();
 
 
-                                    MessageBox.Show("Added successfully!"
+                                    MessageBox.Show("Saved successfully!"
                                         , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                     
                                    
-
+                                    clearFields();
                                     
 
                                 }
@@ -126,6 +127,15 @@ namespace Vendor_Application_Inventory_Platform
                 }
             }
         }
+        public void clearFields()
+        {
+            addVendor_id.Text = "";
+            addVendor_companyName.Text = "";
+            addVendor_companyWebsite.Text = "";
+            addVendor_companyAddress.Text = "";
+            addVendor_softwareName.Text = "";
+            addVendor_typeOfSoftware.Text = "";
+        }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -135,17 +145,7 @@ namespace Vendor_Application_Inventory_Platform
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.RowIndex != 1)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                addVendor_id.Text = row.Cells[1].Value.ToString();
-                addVendor_companyName.Text = row.Cells[2].Value.ToString(); 
-                addVendor_companyWebsite.Text = row.Cells[3].Value.ToString();
-                addVendor_companyAddress.Text = row.Cells[4].Value.ToString();
-                addVendor_softwareName.Text = row.Cells[5].Value.ToString();
-                addVendor_typeOfSoftware.Text = row.Cells[6].Value.ToString(); 
-
-            }
+           
                 
         }
 
@@ -169,6 +169,19 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
-       
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != 1)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                addVendor_id.Text = row.Cells[1].Value.ToString();
+                addVendor_companyName.Text = row.Cells[2].Value.ToString();
+                addVendor_companyWebsite.Text = row.Cells[3].Value.ToString();
+                addVendor_companyAddress.Text = row.Cells[4].Value.ToString();
+                addVendor_softwareName.Text = row.Cells[5].Value.ToString();
+                addVendor_typeOfSoftware.Text = row.Cells[6].Value.ToString();
+
+            }
+        }
     }
 }

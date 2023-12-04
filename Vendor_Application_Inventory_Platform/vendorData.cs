@@ -14,19 +14,81 @@ namespace Vendor_Application_Inventory_Platform
     {
 
 
-        public int ID { get; set; }
-        public string vendor_id { get; set; }
-        public string company_name { get; set; }
-        public string company_website { get; set; }
-        public string company_address { get; set; }
-        public string software_name { get; set; }
-        public string type_of_software { get; set; }
+        public int ID { get; set; } 
+        public string VendorID { get; set; }
+        public string Company { get; set; }
+        public string Website { get; set; }
+        public string Address { get; set; }
+        public string Software { get; set; }
+        public string Software_Type { get; set; }
 
 
 
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\source\repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public List<vendorData> vendorListData()
+
+        public List<vendorData> vendorListData(string searchQuery = "")
+        {
+            List<vendorData> listData = new List<vendorData>();
+
+            if (connect.State != ConnectionState.Open)
+            {
+                try
+                {
+                    connect.Open();
+                    string selectData = "SELECT * FROM vendortable WHERE delete_date is NULL ";
+
+                    if (!string.IsNullOrEmpty(searchQuery))
+                    {
+                        selectData += "AND (vendor_id LIKE @searchQuery OR company_name LIKE @searchQuery)";
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                    {
+                        if (!string.IsNullOrEmpty(searchQuery))
+                        {
+                            cmd.Parameters.AddWithValue("@searchQuery", "%" + searchQuery + "%");
+                        }
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            vendorData vd = new vendorData();
+                            vd.ID = (int)reader["id"];
+                            vd.VendorID = reader["vendor_id"].ToString();
+                            vd.Company = reader["company_name"].ToString();
+                            vd.Website = reader["company_website"].ToString();
+                            vd.Address = reader["company_address"].ToString();
+                            vd.Software = reader["software_name"].ToString();
+                            vd.Software_Type = reader["type_of_software"].ToString();
+
+                            listData.Add(vd);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex);
+                }
+                finally
+                {
+                    connect.Close();
+                }
+            }
+
+            return listData;
+        }
+
+        public List<vendorData> SearchVendorData(string searchQuery)
+        {
+            return vendorListData(searchQuery);
+        }
+    
+
+
+    public List<vendorData> vendorListData()
+
 
         {
             List<vendorData> listData = new List<vendorData>();
@@ -46,12 +108,12 @@ namespace Vendor_Application_Inventory_Platform
                         {
                             vendorData vd = new vendorData();
                             vd.ID = (int)reader["id"];
-                            vd.vendor_id = reader["vendor_id"].ToString();
-                            vd.company_name = reader["company_name"].ToString();
-                            vd.company_website = reader["company_website"].ToString();
-                            vd.company_address = reader["company_address"].ToString();
-                            vd.software_name = reader["software_name"].ToString();
-                            vd.type_of_software = reader["type_of_software"].ToString();
+                            vd.VendorID = reader["vendor_id"].ToString();
+                            vd.Company = reader["company_name"].ToString();
+                            vd.Website = reader["company_website"].ToString();
+                            vd.Address = reader["company_address"].ToString();
+                            vd.Software = reader["software_name"].ToString();
+                            vd.Software_Type = reader["type_of_software"].ToString();
 
 
                             listData.Add(vd);
@@ -76,3 +138,4 @@ namespace Vendor_Application_Inventory_Platform
             
     }
 }
+

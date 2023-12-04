@@ -14,6 +14,5 @@
 
   )
   
-  select * from vendortable
+  select * from vendortable WHERE delete_date IS NOT NULL
 
-  delete from vendortable
