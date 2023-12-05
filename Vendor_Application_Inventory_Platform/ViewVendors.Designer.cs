@@ -51,9 +51,12 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(398, 115);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 33;
             this.dataGridView2.Size = new System.Drawing.Size(757, 596);
@@ -217,7 +220,7 @@
             // 
             // search_btn
             // 
-            this.search_btn.Location = new System.Drawing.Point(738, 53);
+            this.search_btn.Location = new System.Drawing.Point(740, 53);
             this.search_btn.Name = "search_btn";
             this.search_btn.Size = new System.Drawing.Size(112, 34);
             this.search_btn.TabIndex = 31;
@@ -227,9 +230,9 @@
             // 
             // search
             // 
-            this.search.Location = new System.Drawing.Point(856, 56);
+            this.search.Location = new System.Drawing.Point(858, 56);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(175, 31);
+            this.search.Size = new System.Drawing.Size(243, 31);
             this.search.TabIndex = 32;
             this.search.TextChanged += new System.EventHandler(this.search_TextChanged);
             // 

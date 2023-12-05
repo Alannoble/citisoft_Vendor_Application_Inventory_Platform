@@ -35,6 +35,8 @@
             this.vendorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.search_btn = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).BeginInit();
@@ -81,12 +83,33 @@
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(1065, 423);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
+            // 
+            // search_btn
+            // 
+            this.search_btn.Location = new System.Drawing.Point(717, 32);
+            this.search_btn.Name = "search_btn";
+            this.search_btn.Size = new System.Drawing.Size(112, 34);
+            this.search_btn.TabIndex = 32;
+            this.search_btn.Text = "Search";
+            this.search_btn.UseVisualStyleBackColor = true;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
+            // 
+            // search
+            // 
+            this.search.Location = new System.Drawing.Point(843, 32);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(243, 31);
+            this.search.TabIndex = 33;
+            this.search.TextChanged += new System.EventHandler(this.search_TextChanged);
             // 
             // frmVendors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 528);
+            this.Controls.Add(this.search);
+            this.Controls.Add(this.search_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -112,5 +135,7 @@
         private BindingSource vendorBindingSource;
         private BindingSource dataSet1BindingSource;
         private DataGridView dataGridView1;
+        private Button search_btn;
+        private TextBox search;
     }
 }

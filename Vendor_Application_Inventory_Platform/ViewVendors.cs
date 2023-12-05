@@ -1,26 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.IO;
+﻿using System.Data.SqlClient;
+using iText.Layout;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Document = iText.Layout.Document;
+using PdfWriter = iTextSharp.text.pdf.PdfWriter;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using PdfDocument = iTextSharp.text.pdf.PdfDocument;
+using System.Diagnostics;
 
 namespace Vendor_Application_Inventory_Platform
 {
     public partial class ViewVendors : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\Source\Repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True");
+        SqlConnection connect = new(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\Source\Repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True");
 
 
         public ViewVendors()
         {
             InitializeComponent();
             displayvendorData();
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -51,8 +54,9 @@ namespace Vendor_Application_Inventory_Platform
         }
         public void displayvendorData()
         {
-            vendorData vd = new vendorData();
+            vendorData vd = new();
             List<vendorData> listData = vd.vendorListData();
+
 
             dataGridView2.DataSource = listData;
 
@@ -66,6 +70,57 @@ namespace Vendor_Application_Inventory_Platform
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView2.Columns["website"].Index)
+            {
+                object cellValue = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+
+                if (cellValue != null)
+                {
+                    string urlString = cellValue.ToString();
+
+                    
+                    if (!urlString.StartsWith("http://") && !urlString.StartsWith("https://"))
+                    {
+                        urlString = "http://" + urlString;
+                    }
+
+                    OpenWebsiteInExternalBrowser(urlString);
+                }
+            }
+
+        }
+
+        private void OpenWebsiteInExternalBrowser(string url)
+        {
+            try
+            {
+                
+                if (Uri.TryCreate(url, UriKind.Absolute, out Uri uri))
+                {
+                    
+                    ProcessStartInfo psi = new ProcessStartInfo
+                    {
+                        FileName = uri.ToString(),  
+                        UseShellExecute = true      
+                    };
+
+                    
+                    Process.Start(psi);
+                }
+                else
+                {
+                    
+                    MessageBox.Show("Invalid URL format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show("Error opening website: " + ex.Message,
+                    "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -80,14 +135,15 @@ namespace Vendor_Application_Inventory_Platform
 
         public void displayvendorData(string searchQuery = "")
         {
-            vendorData vd = new vendorData();
+            vendorData vd = new();
             List<vendorData> listData = vd.vendorListData(searchQuery);
 
-            dataGridView2.DataSource = null;
+
             dataGridView2.DataSource = listData;
+            dataGridView2.Refresh();
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)// to get the datagrid cell data in the textbox
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
@@ -127,24 +183,24 @@ namespace Vendor_Application_Inventory_Platform
             else
             {
 
-                DialogResult check = MessageBox.Show("Are you sure you want to CHANGE" + 
+                DialogResult check = MessageBox.Show("Are you sure you want to CHANGE" +
                     "Vendor ID: " + addVendor_id.Text.Trim() + "?", "Confirmation Message"
-                    ,MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    , MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
 
-                if(check == DialogResult.Yes)
+                if (check == DialogResult.Yes)
                 {
                     try
                     {
                         connect.Open();
 
-                        DateTime today = DateTime.Today;  
+                        DateTime today = DateTime.Today;
                         string updateData = "UPDATE vendortable SET company_name = @company_name" +
                             ", company_website = @company_website, company_address = @company_address, software_name = @software_name" +
                             ", type_of_software = @type_of_software " +
-                            "WHERE vendor_id = @vendor_id"; 
+                            "WHERE vendor_id = @vendor_id";
 
-                        using (SqlCommand cmd = new SqlCommand(updateData, connect))
+                        using (SqlCommand cmd = new(updateData, connect))
                         {
                             cmd.Parameters.AddWithValue("@company_name", addVendor_companyName.Text.Trim());
                             cmd.Parameters.AddWithValue("@company_website", addVendor_companyWebsite.Text.Trim());
@@ -161,7 +217,7 @@ namespace Vendor_Application_Inventory_Platform
                             MessageBox.Show("Added successfully!"
                                 , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            clearFields(); 
+                            clearFields();
 
                         }
                     }
@@ -180,7 +236,7 @@ namespace Vendor_Application_Inventory_Platform
                     MessageBox.Show("Cancelled."
                         , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                
+
 
             }
         }
@@ -218,11 +274,11 @@ namespace Vendor_Application_Inventory_Platform
                         string updateData = "UPDATE vendortable SET delete_date = @delete_date " +
                             "WHERE vendor_id = @vendor_id";
 
-                        using (SqlCommand cmd = new SqlCommand(updateData, connect))
+                        using (SqlCommand cmd = new(updateData, connect))
                         {
                             cmd.Parameters.AddWithValue("@delete_date", today);
                             cmd.Parameters.AddWithValue("@vendor_id", addVendor_id.Text.Trim());
-                            
+
 
                             cmd.ExecuteNonQuery();
 
@@ -256,6 +312,10 @@ namespace Vendor_Application_Inventory_Platform
             }
         }
 
+
+
+
+
         private void search_btn_Click(object sender, EventArgs e)
         {
             string searchQuery = search.Text.Trim();
@@ -267,6 +327,16 @@ namespace Vendor_Application_Inventory_Platform
             string searchQuery = search.Text.Trim();
             displayvendorData(searchQuery);
         }
+
+
     }
 }
+    
+
+    
+        
+        
+    
+
+
 
