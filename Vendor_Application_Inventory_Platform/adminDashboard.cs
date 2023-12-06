@@ -56,5 +56,10 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

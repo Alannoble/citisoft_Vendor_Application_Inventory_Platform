@@ -14,7 +14,7 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class AddVendor : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\91623\Source\Repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\alanj\source\repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\DB1001.mdf;Integrated Security=True");
 
 
 
@@ -22,7 +22,7 @@ namespace Vendor_Application_Inventory_Platform
         {
             InitializeComponent();
 
-      
+
             displayvendorData();
         }
 
@@ -47,32 +47,32 @@ namespace Vendor_Application_Inventory_Platform
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if(addVendor_id.Text == ""
+            if (addVendor_id.Text == ""
                 || addVendor_companyName.Text == ""
                 || addVendor_companyWebsite.Text == ""
                 || addVendor_companyAddress.Text == ""
-                || addVendor_softwareName.Text ==  ""
-                || addVendor_typeOfSoftware.Text == "" )
-                
+                || addVendor_softwareName.Text == ""
+                || addVendor_typeOfSoftware.Text == "")
+
             {
                 MessageBox.Show("Please fill all blank fields",
                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if(connect.State == ConnectionState.Closed)
+                if (connect.State == ConnectionState.Closed)
                 {
                     try
                     {
                         connect.Open();
                         string checkvmID = "SELECT COUNT(*) from vendortable WHERE vendor_id = @vmID AND delete_date IS NULL";
 
-                        using(SqlCommand checkvm = new SqlCommand(checkvmID, connect))
+                        using (SqlCommand checkvm = new SqlCommand(checkvmID, connect))
                         {
                             checkvm.Parameters.AddWithValue("@vmID", addVendor_id.Text.Trim());
-                            int count = (int) checkvm.ExecuteScalar();
+                            int count = (int)checkvm.ExecuteScalar();
 
-                            if(count >= 1)
+                            if (count >= 1)
                             {
                                 MessageBox.Show(addVendor_id.Text.Trim() + "is already taken",
                                      "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -86,11 +86,11 @@ namespace Vendor_Application_Inventory_Platform
                                     "VALUES(@vmID, @company_name, @company_website, @company_address " +
                                     ", @software_name, @type_of_software, @insert_date)";
 
-                                
 
-                                
 
-                                using(SqlCommand cmd = new SqlCommand(insertData, connect))
+
+
+                                using (SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
                                     cmd.Parameters.AddWithValue("@vmID", addVendor_id.Text.Trim());
                                     cmd.Parameters.AddWithValue("@company_name", addVendor_companyName.Text.Trim());
@@ -108,16 +108,17 @@ namespace Vendor_Application_Inventory_Platform
                                     MessageBox.Show("Saved successfully!"
                                         , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                    
-                                   
+
+
                                     clearFields();
-                                    
+
 
                                 }
                             }
                         }
 
-                    }catch(Exception ex)
+                    }
+                    catch (Exception ex)
                     {
                         MessageBox.Show("Error: " + ex,
                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -147,8 +148,8 @@ namespace Vendor_Application_Inventory_Platform
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-           
-                
+
+
         }
 
         private void addVendor_id_TextChanged(object sender, EventArgs e)
@@ -184,6 +185,11 @@ namespace Vendor_Application_Inventory_Platform
                 addVendor_typeOfSoftware.Text = row.Cells[6].Value.ToString();
 
             }
+        }
+
+        private void AddVendor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
