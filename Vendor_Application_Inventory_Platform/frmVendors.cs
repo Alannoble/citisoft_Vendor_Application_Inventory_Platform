@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,6 +57,85 @@ namespace Vendor_Application_Inventory_Platform
             dataGridView1.DataSource = listData;
 
 
+        }
+        public void displayvendorData(string searchQuery = "")
+        {
+            vendorData vd = new();
+            List<vendorData> listData = vd.vendorListData(searchQuery);
+
+
+            dataGridView1.DataSource = listData;
+            dataGridView1.Refresh();
+        }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            
+
+
+                if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["website"].Index)
+                {
+                    object cellValue = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+
+                    if (cellValue != null)
+                    {
+                        string urlString = cellValue.ToString();
+
+
+                        if (!urlString.StartsWith("http://") && !urlString.StartsWith("https://"))
+                        {
+                            urlString = "http://" + urlString;
+                        }
+
+                        OpenWebsiteInExternalBrowser(urlString);
+                    }
+                }
+
+         }
+
+            private void OpenWebsiteInExternalBrowser(string url)
+            {
+                try
+                {
+
+                    if (Uri.TryCreate(url, UriKind.Absolute, out Uri uri))
+                    {
+
+                        ProcessStartInfo psi = new ProcessStartInfo
+                        {
+                            FileName = uri.ToString(),
+                            UseShellExecute = true
+                        };
+
+
+                        Process.Start(psi);
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Invalid URL format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Error opening website: " + ex.Message,
+                        "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            string searchQuery = search.Text.Trim();
+            displayvendorData(searchQuery);
+        }
+
+        private void search_btn_Click(object sender, EventArgs e)
+        {
+            string searchQuery = search.Text.Trim();
+            displayvendorData(searchQuery);
         }
     }
 }
