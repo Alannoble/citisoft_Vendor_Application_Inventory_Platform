@@ -69,7 +69,7 @@
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(63, 41);
-            panel1.Margin = new Padding(5, 5, 5, 5);
+            panel1.Margin = new Padding(5);
             panel1.Name = "panel1";
             panel1.Size = new Size(1868, 656);
             panel1.TabIndex = 0;
@@ -105,7 +105,7 @@
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = SystemColors.ButtonHighlight;
             dataGridView1.Location = new Point(37, 131);
-            dataGridView1.Margin = new Padding(5, 5, 5, 5);
+            dataGridView1.Margin = new Padding(5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -140,7 +140,7 @@
             // 
             panel3.BackColor = SystemColors.ButtonHighlight;
             panel3.Location = new Point(0, 651);
-            panel3.Margin = new Padding(5, 5, 5, 5);
+            panel3.Margin = new Padding(5);
             panel3.Name = "panel3";
             panel3.Size = new Size(1868, 549);
             panel3.TabIndex = 2;
@@ -149,7 +149,7 @@
             // 
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.Location = new Point(0, 651);
-            panel2.Margin = new Padding(5, 5, 5, 5);
+            panel2.Margin = new Padding(5);
             panel2.Name = "panel2";
             panel2.Size = new Size(1868, 549);
             panel2.TabIndex = 1;
@@ -172,10 +172,11 @@
             panel4.Controls.Add(addVendor_id);
             panel4.Controls.Add(label2);
             panel4.Location = new Point(68, 725);
-            panel4.Margin = new Padding(5, 5, 5, 5);
+            panel4.Margin = new Padding(5);
             panel4.Name = "panel4";
             panel4.Size = new Size(1867, 481);
             panel4.TabIndex = 3;
+            panel4.Paint += panel4_Paint;
             // 
             // button2
             // 
@@ -188,7 +189,7 @@
             button2.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
             button2.Location = new Point(78, 389);
-            button2.Margin = new Padding(5, 5, 5, 5);
+            button2.Margin = new Padding(5);
             button2.Name = "button2";
             button2.Size = new Size(160, 56);
             button2.TabIndex = 14;
@@ -200,7 +201,7 @@
             // 
             addVendor_typeOfSoftware.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             addVendor_typeOfSoftware.Location = new Point(1343, 143);
-            addVendor_typeOfSoftware.Margin = new Padding(5, 5, 5, 5);
+            addVendor_typeOfSoftware.Margin = new Padding(5);
             addVendor_typeOfSoftware.Name = "addVendor_typeOfSoftware";
             addVendor_typeOfSoftware.Size = new Size(370, 41);
             addVendor_typeOfSoftware.TabIndex = 11;
@@ -220,7 +221,7 @@
             // 
             addVendor_softwareName.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             addVendor_softwareName.Location = new Point(1343, 36);
-            addVendor_softwareName.Margin = new Padding(5, 5, 5, 5);
+            addVendor_softwareName.Margin = new Padding(5);
             addVendor_softwareName.Name = "addVendor_softwareName";
             addVendor_softwareName.Size = new Size(370, 41);
             addVendor_softwareName.TabIndex = 9;
@@ -240,7 +241,7 @@
             // 
             addVendor_companyAddress.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             addVendor_companyAddress.Location = new Point(384, 233);
-            addVendor_companyAddress.Margin = new Padding(5, 5, 5, 5);
+            addVendor_companyAddress.Margin = new Padding(5);
             addVendor_companyAddress.Name = "addVendor_companyAddress";
             addVendor_companyAddress.Size = new Size(370, 41);
             addVendor_companyAddress.TabIndex = 7;
@@ -261,7 +262,7 @@
             // 
             addVendor_companyWebsite.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             addVendor_companyWebsite.Location = new Point(386, 157);
-            addVendor_companyWebsite.Margin = new Padding(5, 5, 5, 5);
+            addVendor_companyWebsite.Margin = new Padding(5);
             addVendor_companyWebsite.Name = "addVendor_companyWebsite";
             addVendor_companyWebsite.Size = new Size(370, 41);
             addVendor_companyWebsite.TabIndex = 5;
@@ -281,7 +282,7 @@
             // 
             addVendor_companyName.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             addVendor_companyName.Location = new Point(386, 87);
-            addVendor_companyName.Margin = new Padding(5, 5, 5, 5);
+            addVendor_companyName.Margin = new Padding(5);
             addVendor_companyName.Name = "addVendor_companyName";
             addVendor_companyName.Size = new Size(370, 41);
             addVendor_companyName.TabIndex = 3;
@@ -302,7 +303,7 @@
             // 
             addVendor_id.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             addVendor_id.Location = new Point(386, 20);
-            addVendor_id.Margin = new Padding(5, 5, 5, 5);
+            addVendor_id.Margin = new Padding(5);
             addVendor_id.Name = "addVendor_id";
             addVendor_id.Size = new Size(370, 41);
             addVendor_id.TabIndex = 1;
@@ -331,7 +332,7 @@
             BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(panel4);
             Controls.Add(panel1);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "AddVendor";
             Size = new Size(1994, 1251);
             Load += AddVendor_Load;

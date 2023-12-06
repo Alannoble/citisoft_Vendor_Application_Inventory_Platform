@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using System.Diagnostics;
+using iText.Kernel.Pdf;
+using System.Reflection.Metadata;
+using iText.Layout.Element;
+using iText.Layout;
 
 namespace Vendor_Application_Inventory_Platform
 {
@@ -52,18 +56,13 @@ namespace Vendor_Application_Inventory_Platform
 
 
         }
+        
         private void button2_Click(object sender, EventArgs e)
         {
-            if (addVendor_id.Text == ""
-                || addVendor_companyName.Text == ""
-                || addVendor_companyWebsite.Text == ""
-                || addVendor_companyAddress.Text == ""
-                || addVendor_softwareName.Text == ""
-                || addVendor_typeOfSoftware.Text == "")
-
+            if (addVendor_id.Text == "" || addVendor_companyName.Text == "" || addVendor_companyWebsite.Text == "" ||
+                addVendor_companyAddress.Text == "" || addVendor_softwareName.Text == "" || addVendor_typeOfSoftware.Text == "")
             {
-                MessageBox.Show("Please fill all blank fields",
-                    "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -81,21 +80,18 @@ namespace Vendor_Application_Inventory_Platform
 
                             if (count >= 1)
                             {
-                                MessageBox.Show(addVendor_id.Text.Trim() + "is already taken",
-                                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(addVendor_id.Text.Trim() + " is already taken", "Error Message",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
                                 DateTime today = DateTime.Today;
-                                string insertData = "Insert into vendortable" +
+                                string insertData =
+                                    "Insert into vendortable" +
                                     "(vendor_id, company_name, company_website, " +
                                     "company_address, software_name, type_of_software, insert_date)" +
                                     "VALUES(@vmID, @company_name, @company_website, @company_address " +
                                     ", @software_name, @type_of_software, @insert_date)";
-
-
-
-
 
                                 using (SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
@@ -107,32 +103,101 @@ namespace Vendor_Application_Inventory_Platform
                                     cmd.Parameters.AddWithValue("@type_of_software", addVendor_typeOfSoftware.Text.Trim());
                                     cmd.Parameters.AddWithValue("@insert_date", today);
 
-
                                     cmd.ExecuteNonQuery();
                                     displayvendorData();
 
+                                    DialogResult result = MessageBox.Show("Would you like to Save Vendor Information:", "Save Options",
+                                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                                    MessageBox.Show("Saved successfully!"
-                                        , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    if (result == DialogResult.Yes)
+                                    {
+                                        DialogResult result1 = MessageBox.Show("Do you want to save As a PDF File?", "Save Options", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                                        if (result1 == DialogResult.Yes)
+                                        {
+                                            // Save as PDF
+                                            SaveAsPdf();
+                                            clearFields();
+                                        }
+                                        else if (result1 == DialogResult.No)
+                                        {
+                                            SaveData();
 
-
-
-                                    clearFields();
-
-
+                                            clearFields();
+                                        }
+                                        // If Cancel is selected, do nothing
+                                    }
+                                    else if (result == DialogResult.No)
+                                    {
+                                        // Save without PDF
+                                        clearFields();
+                                        
+                                    }
+                                    
                                 }
                             }
                         }
-
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error: " + ex,
-                    "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
                         connect.Close();
+                    }
+                }
+            }
+        }
+
+        private void SaveData()
+        {
+            MessageBox.Show("Data saved successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void SaveAsPdf()
+        {
+            SaveFileDialog pdfSaveDialog = new SaveFileDialog();
+            pdfSaveDialog.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
+            pdfSaveDialog.Title = "Save as PDF";
+
+            if (pdfSaveDialog.ShowDialog() == DialogResult.OK)
+            {
+                string pdfFilePath = pdfSaveDialog.FileName;
+
+                try
+                {
+                    using (PdfWriter writer = new PdfWriter(pdfFilePath))
+                    {
+                        using (PdfDocument pdf = new PdfDocument(writer))
+                        {
+                           using iText.Layout.Document document = new iText.Layout.Document(pdf);
+
+                            // Add content to the PDF document with null checks
+                            document.Add(new Paragraph($"vmID: {addVendor_id.Text ?? "N/A"}"));
+                            document.Add(new Paragraph($"company_name: {addVendor_companyName.Text ?? "N/A"}"));
+                            document.Add(new Paragraph($"company_website: {addVendor_companyWebsite.Text ?? "N/A"}"));
+                            document.Add(new Paragraph($"company_Address: {addVendor_companyAddress.Text ?? "N/A"}"));
+                            document.Add(new Paragraph($"software_Name: {addVendor_softwareName.Text ?? "N/A"}"));
+                            document.Add(new Paragraph($"type_of_Software: {addVendor_typeOfSoftware.Text ?? "N/A"}"));
+
+                            MessageBox.Show("Saved successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    {
+                        // Log the exception details
+                        using (StreamWriter sw = new StreamWriter("error_log.txt", true))
+                        {
+                            sw.WriteLine($"Error saving PDF: {ex.Message}");
+                            sw.WriteLine($"StackTrace: {ex.StackTrace}");
+                            sw.WriteLine($"Source: {ex.Source}");
+                            sw.WriteLine($"TargetSite: {ex.TargetSite}");
+                            sw.WriteLine();
+                        }
+
+                        MessageBox.Show($"Error saving PDF: {ex.Message}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -213,42 +278,47 @@ namespace Vendor_Application_Inventory_Platform
 
         }
 
-            private void addVendor_id_TextChanged(object sender, EventArgs e)
+        private void addVendor_id_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableAdapterManagerBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
             {
-
-            }
-
-            private void tableAdapterManagerBindingSource_CurrentChanged(object sender, EventArgs e)
-            {
-
-            }
-
-            private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-            {
-
-            }
-
-            private void panel1_Paint(object sender, PaintEventArgs e)
-            {
-
-            }
-
-            private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-            {
-                if (e.RowIndex != -1)
-                {
-                    DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                    addVendor_id.Text = row.Cells[1].Value.ToString();
-                    addVendor_companyName.Text = row.Cells[2].Value.ToString();
-                    addVendor_companyWebsite.Text = row.Cells[3].Value.ToString();
-                    addVendor_companyAddress.Text = row.Cells[4].Value.ToString();
-                    addVendor_softwareName.Text = row.Cells[5].Value.ToString();
-                    addVendor_typeOfSoftware.Text = row.Cells[6].Value.ToString();
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                addVendor_id.Text = row.Cells[1].Value.ToString();
+                addVendor_companyName.Text = row.Cells[2].Value.ToString();
+                addVendor_companyWebsite.Text = row.Cells[3].Value.ToString();
+                addVendor_companyAddress.Text = row.Cells[4].Value.ToString();
+                addVendor_softwareName.Text = row.Cells[5].Value.ToString();
+                addVendor_typeOfSoftware.Text = row.Cells[6].Value.ToString();
 
             }
         }
 
         private void AddVendor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
