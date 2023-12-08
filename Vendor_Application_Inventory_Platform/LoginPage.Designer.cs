@@ -40,6 +40,7 @@
             pictureBox3 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
@@ -190,12 +191,23 @@
             label2.Text = "X";
             label2.Click += label2_Click_4;
             // 
+            // button1
+            // 
+            button1.Location = new Point(404, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(45, 36);
+            button1.TabIndex = 12;
+            button1.Text = "X";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.Black;
             ClientSize = new Size(447, 621);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
@@ -232,5 +244,6 @@
         private PictureBox pictureBox3;
         private Label label1;
         private Label label2;
+        private Button button1;
     }
 }
