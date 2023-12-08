@@ -71,18 +71,6 @@ namespace Vendor_Application_Inventory_Platform
             }
         }
 
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void SignUp_button_Click_1(object sender, EventArgs e)
         {
         }
@@ -157,31 +145,23 @@ namespace Vendor_Application_Inventory_Platform
             Application.Exit();
         }
 
-        private void LoginPage_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void label2_Click_3(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void SignUp_button_Click(object sender, EventArgs e)
+        private void SignUp_button_Click_2(object sender, EventArgs e)
         {
             UserManagment userManager = new UserManagment();
             SignUp_Page signUpPage = new SignUp_Page(userManager);
             signUpPage.Show();
-        }
-
-        private void LoginPage_Load_2(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
 
         private void label2_Click_4(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
     }
 }

@@ -29,9 +29,9 @@ namespace Vendor_Application_Inventory_Platform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            adminDashboard1.Visible = true; 
+            adminDashboard1.Visible = true;
             addVendor1.Visible = false;
-            viewVendors1.Visible = false;   
+            viewVendors1.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,7 +53,17 @@ namespace Vendor_Application_Inventory_Platform
 
         private void label4_Click(object sender, EventArgs e)
         {
+            DialogResult check = MessageBox.Show("Are you sure you want to logout?"
+              , "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+
+            if (check == DialogResult.Yes)
+            {
+                LoginPage loginForm = new LoginPage();
+                loginForm.Show();
+                this.Hide();
+
+            }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -78,7 +88,7 @@ namespace Vendor_Application_Inventory_Platform
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            DialogResult check = MessageBox.Show("Are you sure you want to logout?" 
+            DialogResult check = MessageBox.Show("Are you sure you want to logout?"
                , "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 
