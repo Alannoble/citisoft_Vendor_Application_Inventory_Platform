@@ -60,7 +60,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1169, 40);
+            panel1.Size = new Size(1167, 40);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -98,7 +98,7 @@
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1169, 40);
+            panel3.Size = new Size(1167, 40);
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
             // 
@@ -116,7 +116,7 @@
             panel2.Location = new Point(0, 40);
             panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(228, 609);
+            panel2.Size = new Size(228, 611);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -242,10 +242,11 @@
             // 
             // adminDashboard1
             // 
-            adminDashboard1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             adminDashboard1.BorderStyle = BorderStyle.FixedSingle;
             adminDashboard1.Location = new Point(228, 40);
             adminDashboard1.Margin = new Padding(4);
+            adminDashboard1.MaximumSize = new Size(940, 612);
+            adminDashboard1.MinimumSize = new Size(940, 612);
             adminDashboard1.Name = "adminDashboard1";
             adminDashboard1.RightToLeft = RightToLeft.No;
             adminDashboard1.Size = new Size(940, 612);
@@ -256,20 +257,18 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1169, 649);
+            ClientSize = new Size(1167, 651);
             Controls.Add(adminDashboard1);
             Controls.Add(viewVendors1);
             Controls.Add(addVendor1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
-            Icon = (Icon)resources.GetObject("$this.Icon");
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
-            MinimumSize = new Size(1169, 649);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CITISOFT | Admin";
+            Text = "MainForm";
             Load += MainForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

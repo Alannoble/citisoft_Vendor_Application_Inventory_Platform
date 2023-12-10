@@ -39,80 +39,81 @@
             Forgotpassword_button = new Label();
             pictureBox3 = new PictureBox();
             label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // SignUp_button
             // 
-            SignUp_button.Anchor = AnchorStyles.None;
+            SignUp_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SignUp_button.BackColor = Color.Transparent;
             SignUp_button.Cursor = Cursors.Hand;
             SignUp_button.FlatAppearance.BorderSize = 0;
             SignUp_button.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             SignUp_button.ForeColor = SystemColors.Highlight;
-            SignUp_button.Location = new Point(158, 582);
+            SignUp_button.Location = new Point(177, 573);
             SignUp_button.Margin = new Padding(3, 4, 3, 4);
             SignUp_button.Name = "SignUp_button";
-            SignUp_button.Size = new Size(108, 41);
-            SignUp_button.TabIndex = 6;
+            SignUp_button.Size = new Size(111, 37);
+            SignUp_button.TabIndex = 3;
             SignUp_button.Text = "Sign Up";
             SignUp_button.UseVisualStyleBackColor = false;
             SignUp_button.Click += SignUp_button_Click_2;
             // 
             // Login_button
             // 
-            Login_button.Anchor = AnchorStyles.None;
-            Login_button.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Login_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Login_button.BackColor = Color.DodgerBlue;
             Login_button.Cursor = Cursors.Hand;
             Login_button.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Login_button.ForeColor = Color.White;
-            Login_button.Location = new Point(133, 470);
+            Login_button.Location = new Point(165, 464);
             Login_button.Margin = new Padding(3, 4, 3, 4);
             Login_button.Name = "Login_button";
-            Login_button.Size = new Size(161, 54);
-            Login_button.TabIndex = 7;
+            Login_button.Size = new Size(137, 57);
+            Login_button.TabIndex = 2;
             Login_button.Text = "Login";
             Login_button.UseVisualStyleBackColor = false;
             Login_button.Click += Login_button_Click;
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.None;
+            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPassword.BackColor = SystemColors.Control;
             txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Location = new Point(118, 414);
+            txtPassword.Location = new Point(121, 413);
             txtPassword.Margin = new Padding(3, 4, 3, 4);
-            txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(206, 27);
+            txtPassword.PasswordChar = '•';
+            txtPassword.Size = new Size(220, 20);
             txtPassword.TabIndex = 1;
             txtPassword.UseSystemPasswordChar = true;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // txtUsername
             // 
-            txtUsername.Anchor = AnchorStyles.None;
+            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtUsername.BackColor = SystemColors.Control;
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Cursor = Cursors.IBeam;
-            txtUsername.Location = new Point(118, 330);
+            txtUsername.Location = new Point(121, 329);
             txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(206, 27);
+            txtUsername.Size = new Size(220, 26);
             txtUsername.TabIndex = 0;
             // 
             // Password_label
             // 
-            Password_label.Anchor = AnchorStyles.None;
+            Password_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Password_label.AutoEllipsis = true;
             Password_label.AutoSize = true;
             Password_label.BackColor = Color.Transparent;
             Password_label.FlatStyle = FlatStyle.Popup;
             Password_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             Password_label.ForeColor = SystemColors.InactiveCaption;
-            Password_label.Location = new Point(121, 386);
+            Password_label.Location = new Point(121, 385);
             Password_label.Name = "Password_label";
             Password_label.Size = new Size(84, 23);
             Password_label.TabIndex = 5;
@@ -120,14 +121,14 @@
             // 
             // username_label
             // 
-            username_label.Anchor = AnchorStyles.None;
+            username_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             username_label.AutoEllipsis = true;
             username_label.AutoSize = true;
             username_label.BackColor = Color.Transparent;
             username_label.FlatStyle = FlatStyle.Popup;
             username_label.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             username_label.ForeColor = SystemColors.InactiveCaption;
-            username_label.Location = new Point(121, 303);
+            username_label.Location = new Point(121, 302);
             username_label.Name = "username_label";
             username_label.Size = new Size(89, 23);
             username_label.TabIndex = 4;
@@ -135,14 +136,13 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(121, 99);
+            pictureBox1.Location = new Point(131, 81);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(207, 200);
+            pictureBox1.Size = new Size(200, 200);
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
@@ -173,23 +173,35 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveBorder;
-            label1.Location = new Point(128, 543);
+            label1.Location = new Point(155, 549);
             label1.Name = "label1";
             label1.Size = new Size(162, 20);
             label1.TabIndex = 10;
             label1.Text = "Don't have an account?";
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Cursor = Cursors.Hand;
+            label2.Location = new Point(439, 2);
+            label2.Margin = new Padding(1, 0, 1, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(18, 20);
+            label2.TabIndex = 11;
+            label2.Text = "X";
+            label2.Click += label2_Click_4;
             // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(439, 697);
-            Controls.Add(Login_button);
+            ClientSize = new Size(460, 750);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
             Controls.Add(Forgotpassword_button);
@@ -198,14 +210,16 @@
             Controls.Add(username_label);
             Controls.Add(txtUsername);
             Controls.Add(txtPassword);
+            Controls.Add(Login_button);
             Controls.Add(SignUp_button);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(439, 697);
             Name = "LoginPage";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CITISOFT | Login";
+            Text = "Form1";
             Load += LoginPage_Load;
+            KeyPress += LoginPage_KeyPress;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
@@ -224,5 +238,6 @@
         private Label Forgotpassword_button;
         private PictureBox pictureBox3;
         private Label label1;
+        private Label label2;
     }
 }

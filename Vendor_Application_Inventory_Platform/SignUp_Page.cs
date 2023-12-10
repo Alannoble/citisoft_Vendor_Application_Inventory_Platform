@@ -53,6 +53,7 @@ namespace Vendor_Application_Inventory_Platform
                         userManager.RegisterUser(username, password);
                         MessageBox.Show("Registration successful!", "SUCCESS!");
                         this.Close(); // Close the registration form after successful registration
+                        new LoginPage().Show();
                     }
                 }
                 else

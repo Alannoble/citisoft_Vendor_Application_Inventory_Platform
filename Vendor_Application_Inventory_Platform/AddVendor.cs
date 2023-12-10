@@ -184,13 +184,9 @@ namespace Vendor_Application_Inventory_Platform
                         }
                     }
                 }
-
-               //
-
                 catch (Exception ex)
                 {
-
-                  
+                    {
                         // Log the exception details
                         using (StreamWriter sw = new StreamWriter("error_log.txt", true))
                         {
@@ -202,7 +198,7 @@ namespace Vendor_Application_Inventory_Platform
                         }
 
                         MessageBox.Show($"Error saving PDF: {ex.Message}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   
+                    }
                 }
             }
         }
