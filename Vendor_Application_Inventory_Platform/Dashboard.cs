@@ -65,7 +65,7 @@ namespace Vendor_Application_Inventory_Platform
                     Application.Exit();
                 }
             }
-        } 
+        }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.pnlFormLoader.Controls.Clear();
@@ -239,9 +239,9 @@ namespace Vendor_Application_Inventory_Platform
         {
 
         }
-        
 
-           
+
+
     }
 }
 

@@ -55,9 +55,8 @@ namespace Vendor_Application_Inventory_Platform
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(7);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1924, 163);
+            panel1.Size = new Size(905, 80);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
@@ -68,11 +67,10 @@ namespace Vendor_Application_Inventory_Platform
             contactBtn.FlatStyle = FlatStyle.Popup;
             contactBtn.Font = new Font("Nirmala UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             contactBtn.ForeColor = SystemColors.Desktop;
-            contactBtn.Location = new Point(841, 0);
-            contactBtn.Margin = new Padding(7);
+            contactBtn.Location = new Point(395, 0);
             contactBtn.Name = "contactBtn";
-            contactBtn.Size = new Size(292, 163);
-            contactBtn.TabIndex = 2;
+            contactBtn.Size = new Size(137, 80);
+            contactBtn.TabIndex = 3;
             contactBtn.Text = "Contact Us";
             contactBtn.UseVisualStyleBackColor = true;
             contactBtn.Click += contactBtn_Click_1;
@@ -84,10 +82,9 @@ namespace Vendor_Application_Inventory_Platform
             vendorBtn.FlatStyle = FlatStyle.Popup;
             vendorBtn.Font = new Font("Nirmala UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             vendorBtn.ForeColor = SystemColors.Desktop;
-            vendorBtn.Location = new Point(549, 0);
-            vendorBtn.Margin = new Padding(7);
+            vendorBtn.Location = new Point(258, 0);
             vendorBtn.Name = "vendorBtn";
-            vendorBtn.Size = new Size(292, 163);
+            vendorBtn.Size = new Size(137, 80);
             vendorBtn.TabIndex = 2;
             vendorBtn.Text = "Vendors";
             vendorBtn.UseVisualStyleBackColor = true;
@@ -100,11 +97,10 @@ namespace Vendor_Application_Inventory_Platform
             homeBtn.FlatStyle = FlatStyle.Popup;
             homeBtn.Font = new Font("Nirmala UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             homeBtn.ForeColor = SystemColors.Desktop;
-            homeBtn.Location = new Point(257, 0);
-            homeBtn.Margin = new Padding(7);
+            homeBtn.Location = new Point(121, 0);
             homeBtn.Name = "homeBtn";
-            homeBtn.Size = new Size(292, 163);
-            homeBtn.TabIndex = 2;
+            homeBtn.Size = new Size(137, 80);
+            homeBtn.TabIndex = 1;
             homeBtn.Text = "Home";
             homeBtn.UseVisualStyleBackColor = true;
             homeBtn.Click += homeBtn_Click;
@@ -114,9 +110,8 @@ namespace Vendor_Application_Inventory_Platform
             pictureBox2.Dock = DockStyle.Left;
             pictureBox2.Image = Properties.Resources.Screenshot_2023_11_10_004008;
             pictureBox2.Location = new Point(0, 0);
-            pictureBox2.Margin = new Padding(7);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(257, 163);
+            pictureBox2.Size = new Size(121, 80);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
@@ -125,20 +120,18 @@ namespace Vendor_Application_Inventory_Platform
             // 
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(1774, 0);
-            panel2.Margin = new Padding(7);
+            panel2.Location = new Point(834, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(150, 163);
-            panel2.TabIndex = 0;
+            panel2.Size = new Size(71, 80);
+            panel2.TabIndex = 4;
             // 
             // pictureBox1
             // 
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(36, 25);
-            pictureBox1.Margin = new Padding(7);
+            pictureBox1.Location = new Point(17, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(105, 102);
+            pictureBox1.Size = new Size(49, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -147,26 +140,26 @@ namespace Vendor_Application_Inventory_Platform
             // pnlFormLoader
             // 
             pnlFormLoader.ImeMode = ImeMode.NoControl;
-            pnlFormLoader.Location = new Point(0, 154);
-            pnlFormLoader.Margin = new Padding(7);
+            pnlFormLoader.Location = new Point(0, 75);
             pnlFormLoader.Name = "pnlFormLoader";
-            pnlFormLoader.Size = new Size(1924, 874);
+            pnlFormLoader.Size = new Size(905, 426);
             pnlFormLoader.TabIndex = 3;
             pnlFormLoader.Paint += pnlFormLoader_Paint_3;
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1924, 1050);
+            ClientSize = new Size(905, 512);
             Controls.Add(panel1);
             Controls.Add(pnlFormLoader);
-            Margin = new Padding(2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(1);
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Dashboard";
+            Text = "CITISOFT | Dashboard";
             Load += Dashboard_Load_1;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
