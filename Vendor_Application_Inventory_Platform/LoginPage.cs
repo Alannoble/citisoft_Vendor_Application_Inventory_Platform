@@ -48,7 +48,7 @@ namespace Vendor_Application_Inventory_Platform
         {
             MessageBox.Show("Welcome to CITISOFT");
         }
-
+        //
         private void Login_button_Click(object sender, EventArgs e)
         {
             if (userManager != null)
