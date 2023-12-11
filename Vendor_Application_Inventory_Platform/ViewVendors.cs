@@ -13,7 +13,7 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class ViewVendors : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\emman\source\repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\91623\source\repos\albinsaji00\New folder\Vendor_Application_Inventory_Platform\batmon.mdf"";Integrated Security=True");
 
 
         public ViewVendors()
@@ -22,6 +22,14 @@ namespace Vendor_Application_Inventory_Platform
             displayvendorData();
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
 
+        }
+
+        public SignUp_Page SignUp_Page
+        {
+            get => default;
+            set
+            {
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

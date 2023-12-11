@@ -19,16 +19,24 @@ namespace Vendor_Application_Inventory_Platform
 
     public partial class frmVendors : Form
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\alanj\Source\Repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True");
-
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\91623\source\repos\albinsaji00\New folder\Vendor_Application_Inventory_Platform\batmon.mdf"";Integrated Security=True");
+        // sql database connection
         public frmVendors()
         {
             InitializeComponent();
             displayvendorData();
+            InitializeDataGridView();
 
         }
-
-        private void frmVendors_Load(object sender, EventArgs e)
+        private void InitializeDataGridView()
+        {
+            // Add a new column for comments and ratings
+            DataGridViewTextBoxColumn commentRatingColumn = new DataGridViewTextBoxColumn();
+            commentRatingColumn.Name = "CommentRatingColumn";
+            commentRatingColumn.HeaderText = "Comment and Rating";
+            dataGridView1.Columns.Add(commentRatingColumn);
+        }
+            private void frmVendors_Load(object sender, EventArgs e)
         {
 
         }
@@ -56,13 +64,18 @@ namespace Vendor_Application_Inventory_Platform
         public void displayvendorData()
         {
             vendorData vd = new vendorData();
+           
             List<vendorData> listData = vd.vendorListData();
 
+    
             dataGridView1.DataSource = listData;
+            //to deisplay vendorData 
 
 
         }
-        public void displayvendorData(string searchQuery = "")
+        public void displayvendorData(string searchQuery = "") //to display vendor data in the DataGridView based on a search query
+
+
         {
             vendorData vd = new();
             List<vendorData> listData = vd.vendorListData(searchQuery);
@@ -77,21 +90,28 @@ namespace Vendor_Application_Inventory_Platform
 
 
 
-
+            // Checks if the clicked cell is within a valid row and corresponds to the "website" column
             if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["website"].Index)
+
             {
+                //to get the value of the clicked cell
                 object cellValue = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
 
                 if (cellValue != null)
                 {
+                    // Convert the cell value to a string (assuming it contains a URL)
                     string urlString = cellValue.ToString();
 
 
+                    // Check if the URL does not start with "http://" or "https://"
                     if (!urlString.StartsWith("http://") && !urlString.StartsWith("https://"))
                     {
+
+                        // If not, prepend "http://" to the URL
                         urlString = "http://" + urlString;
                     }
 
+                    // Open the website in an external browser
                     OpenWebsiteInExternalBrowser(urlString);
                 }
             }
@@ -102,22 +122,23 @@ namespace Vendor_Application_Inventory_Platform
         {
             try
             {
+                //try to create a Uri from the provided URL
 
                 if (Uri.TryCreate(url, UriKind.Absolute, out Uri uri))
                 {
-
+                    // If successful, create ProcessStartInfo to start the default browser
                     ProcessStartInfo psi = new ProcessStartInfo
                     {
                         FileName = uri.ToString(),
                         UseShellExecute = true
                     };
 
-
+                    // Start the default browser with the specified URL
                     Process.Start(psi);
                 }
                 else
                 {
-
+                    //display error if URL works
                     MessageBox.Show("Invalid URL format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -132,14 +153,19 @@ namespace Vendor_Application_Inventory_Platform
 
         private void search_TextChanged(object sender, EventArgs e)
         {
+            // Get the trimmed search query from the search TextBox
             string searchQuery = search.Text.Trim();
+
+            // Call the displayvendorData method with the specified search query
             displayvendorData(searchQuery);
         }
 
         private void search_btn_Click(object sender, EventArgs e)
         {
+
+            // Get the trimmed search query from the search TextBox
             string searchQuery = search.Text.Trim();
-            displayvendorData(searchQuery);
+            // Call the displayvendorData method with the specified search query            displayvendorData(searchQuery);
         }
 
         private void pdfBtn_Click(object sender, EventArgs e)
@@ -224,5 +250,51 @@ namespace Vendor_Application_Inventory_Platform
                 }
             }
         }
+        private void DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Get the selected cell data
+                object cellValue = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+                string selectedCellData = cellValue?.ToString();
+
+                if (!string.IsNullOrEmpty(selectedCellData))
+                {
+                    // Open the CommentRatingForm with the selected cell data
+                    CommentRatingForm commentRatingForm = new CommentRatingForm(selectedCellData);
+                    commentRatingForm.ShowDialog();
+
+                    // Update the DataGridView after saving comment and rating
+                    displayvendorData();
+                }
+            }
+        }
+
+            private void button1_Click(object sender, EventArgs e)
+        {
+
+            // Check if any cell is selected
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                // Get the data from the selected cell
+                string selectedCellData = dataGridView1.SelectedCells[0].Value.ToString();
+
+                // Pass the selected cell data to CommentRatingForm constructor
+                CommentRatingForm commentRatingForm = new CommentRatingForm(selectedCellData);
+                commentRatingForm.ShowDialog();
+
+                // Update the DataGridView after saving comment and rating
+                displayvendorData();
+            }
+            else
+            {
+                MessageBox.Show("Please select a cell before adding a comment and rating.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
+
+        
     }
 }
