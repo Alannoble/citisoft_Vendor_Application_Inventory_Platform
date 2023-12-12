@@ -3,3 +3,7 @@ emman,emman
 user,user
 citisoft,citisoft
 citisoft_admin,Password
+Jaya,jaya
+username,user
+12345,1234
+abcd,abc

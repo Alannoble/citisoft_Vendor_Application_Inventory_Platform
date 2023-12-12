@@ -1,7 +1,17 @@
-﻿SET identity_insert [dbo].[vendortable] ON
-INSERT INTO [dbo].[vendortable] ([id], [vendor_id], [comapny_name], [company_website], [company_address], [software_name], [type_of_software], [insert_date], [update_date],
-[delete_date])
-VALUES
-(1, 1, "ADDEPAR, INC.", "https://addepar.com/", "23 Bedford Square (1st Floor) London, WC1B 3HH", "ADDEPAR", "Wealth Managment", "nil", "nil", "nil"),
-(2, 2, "Allvue", "https://www.allvuesystems.com/", "Becket House, 7th FLoor, 36 Old Jewry, London EC2R 8DD", "Allvue", "Alternative investment", "nil", "nil", "nil")
-SET IDENTITY_INSERT [dbo].[vendortable] OFF
+﻿create table vendortable
+(
+  id int primary key identity(1,1),
+  vendor_id varchar(max) null,
+  company_name varchar(max),
+  company_website varchar (max),
+  company_address varchar (max),
+  software_name varchar(max),
+  type_of_software varchar(max),
+  insert_date date null,
+  update_date date null,
+  delete_date date null
+
+
+  )
+  
+  select * from vendortable

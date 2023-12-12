@@ -5,7 +5,6 @@ using iTextSharp.text.pdf;
 using Document = iText.Layout.Document;
 using PdfWriter = iTextSharp.text.pdf.PdfWriter;
 using iText.Kernel.Pdf;
-using iText.Layout;
 using iText.Layout.Element;
 using PdfDocument = iTextSharp.text.pdf.PdfDocument;
 using System.Diagnostics;
@@ -14,7 +13,7 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class ViewVendors : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\alanj\source\repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\DB1001.mdf;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\91623\source\repos\albinsaji00\New folder\Vendor_Application_Inventory_Platform\batmon.mdf"";Integrated Security=True");
 
 
         public ViewVendors()
@@ -23,7 +22,14 @@ namespace Vendor_Application_Inventory_Platform
             displayvendorData();
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
 
+        }
 
+        public SignUp_Page SignUp_Page
+        {
+            get => default;
+            set
+            {
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -54,7 +60,7 @@ namespace Vendor_Application_Inventory_Platform
         }
         public void displayvendorData()
         {
-            vendorData vd = new();
+            vendorData vd = new vendorData();
             List<vendorData> listData = vd.vendorListData();
 
 
@@ -79,7 +85,7 @@ namespace Vendor_Application_Inventory_Platform
                 {
                     string urlString = cellValue.ToString();
 
-                    
+
                     if (!urlString.StartsWith("http://") && !urlString.StartsWith("https://"))
                     {
                         urlString = "http://" + urlString;
@@ -95,29 +101,29 @@ namespace Vendor_Application_Inventory_Platform
         {
             try
             {
-                
+
                 if (Uri.TryCreate(url, UriKind.Absolute, out Uri uri))
                 {
-                    
+
                     ProcessStartInfo psi = new ProcessStartInfo
                     {
-                        FileName = uri.ToString(),  
-                        UseShellExecute = true      
+                        FileName = uri.ToString(),
+                        UseShellExecute = true
                     };
 
-                    
+
                     Process.Start(psi);
                 }
                 else
                 {
-                    
+
                     MessageBox.Show("Invalid URL format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             catch (Exception ex)
             {
-                
+
                 MessageBox.Show("Error opening website: " + ex.Message,
                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -331,12 +337,12 @@ namespace Vendor_Application_Inventory_Platform
 
     }
 }
-    
 
-    
-        
-        
-    
+
+
+
+
+
 
 
 

@@ -19,7 +19,7 @@ namespace Vendor_Application_Inventory_Platform
 {
     public partial class AddVendor : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\emman\source\repos\Alannoble\citisoft_Vendor_Application_Inventory_Platform\Vendor_Application_Inventory_Platform\batmon.mdf;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\91623\source\repos\albinsaji00\New folder\Vendor_Application_Inventory_Platform\batmon.mdf"";Integrated Security=True");
 
 
 
@@ -184,13 +184,9 @@ namespace Vendor_Application_Inventory_Platform
                         }
                     }
                 }
-
-               //
-
                 catch (Exception ex)
                 {
-
-                  
+                    {
                         // Log the exception details
                         using (StreamWriter sw = new StreamWriter("error_log.txt", true))
                         {
@@ -202,7 +198,7 @@ namespace Vendor_Application_Inventory_Platform
                         }
 
                         MessageBox.Show($"Error saving PDF: {ex.Message}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   
+                    }
                 }
             }
         }

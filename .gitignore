@@ -360,4 +360,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/Vendor_Application_Inventory_Platform/batmon.mdf

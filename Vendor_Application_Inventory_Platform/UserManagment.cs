@@ -8,7 +8,7 @@ namespace Vendor_Application_Inventory_Platform
 {
     public class UserManagment
     {
-        private const string CredentialsFilePath = @"C:\\Users\\emman\\source\\repos\\Alannoble\\citisoft_Vendor_Application_Inventory_Platform\\Vendor_Application_Inventory_Platform\\UserData.txt";
+        private const string CredentialsFilePath = @"C:\Users\91623\source\repos\albinsaji00\New folder\Vendor_Application_Inventory_Platform\UserData.txt";
 
         public bool CheckCredentials(string username, string password)
         {

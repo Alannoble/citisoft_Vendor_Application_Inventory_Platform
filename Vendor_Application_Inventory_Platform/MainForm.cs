@@ -53,8 +53,9 @@ namespace Vendor_Application_Inventory_Platform
 
         private void label4_Click(object sender, EventArgs e)
         {
+
             DialogResult check = MessageBox.Show("Are you sure you want to logout?"
-              , "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+               , "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 
             if (check == DialogResult.Yes)
